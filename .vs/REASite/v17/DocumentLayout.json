@@ -1,0 +1,109 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\views\\shared\\partialaddpropertyview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\views\\shared\\partialaddpropertyview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "REASite\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "REASite\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T19:14:26.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "partialAddPropertyView.cshtml",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Shared\\partialAddPropertyView.cshtml",
+              "RelativeDocumentMoniker": "REASite\\Views\\Shared\\partialAddPropertyView.cshtml",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Shared\\partialAddPropertyView.cshtml",
+              "RelativeToolTip": "REASite\\Views\\Shared\\partialAddPropertyView.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T18:54:29.176Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "REASite\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "REASite\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T18:14:14.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Program.cs",
+              "RelativeDocumentMoniker": "REASite\\Program.cs",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Program.cs",
+              "RelativeToolTip": "REASite\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T18:05:36.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "REASite\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "REASite\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAIAAAAAAAAAAAApwBQAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T17:36:46.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
