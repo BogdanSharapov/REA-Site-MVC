@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using REASite.Data;
 using REASite.Models;
 
 namespace REASite.Controllers
@@ -7,10 +8,11 @@ namespace REASite.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly REASiteContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(REASiteContext context)
         {
-            _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()

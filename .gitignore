@@ -1,0 +1,37 @@
+ # Visual Studio
+.vs/
+*.user
+*.suo
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+[x64]/
+[x86]/
+[Aa][Rr][Mm]/
+[Bb]in/
+[Oo]bj/
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+*.nuspec
+
+# Rider
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# User-specific files
+*.db
+*.pdb
+*.log
+
+# ASP.NET Core
+appsettings*.json
+wwwroot/lib/
+wwwroot/css/
+wwwroot/js/
+

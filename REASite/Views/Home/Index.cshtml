@@ -4,8 +4,11 @@
 
 <div class="text-center">
     <main>
+        <form method="post" asp-controller="Api" asp-action="Index">
         @{await Html.RenderPartialAsync("partialAddPropertyView");}
+        </form>
+        <form method="get" asp-controller="Api" asp-action="Index">
+        @{await Html.RenderPartialAsync("partialSearchPropertyView");}
+        </form>
     </main>
 </div>
-
-
