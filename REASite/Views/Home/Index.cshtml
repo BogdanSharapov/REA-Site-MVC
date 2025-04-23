@@ -10,5 +10,8 @@
         <form method="get" asp-controller="Api" asp-action="Index">
         @{await Html.RenderPartialAsync("partialSearchPropertyView");}
         </form>
+        <form method="get" asp-controller="Home" asp-action="Index">
+            @{await Html.RenderPartialAsync("partialCardGridView");}
+        </form>
     </main>
 </div>
