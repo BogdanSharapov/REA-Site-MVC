@@ -8,15 +8,23 @@ namespace REASite.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly REASiteContext _context;
+        private readonly REASiteDbContext _context;
 
-        public HomeController(REASiteContext context)
+        public HomeController(REASiteDbContext context)
         {
             _context = context;
         }
 
         public IActionResult Index()
         {
+            List<ApartmentModel> ApartmentsList = _context.Apartments.ToList();
+
+            return View(ApartmentsList);
+        }
+
+        public IActionResult Create()
+        {
+
             return View();
         }
 
