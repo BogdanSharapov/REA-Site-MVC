@@ -7,6 +7,14 @@
       "type": "postgresql",
       "connectionId": "ConnectionStrings:DatabaseConnection",
       "dynamicId": null
+    },
+    "mssql1": {
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:AuthDbContextConnection"
+    },
+    "mssql2": {
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:REASiteContextConnection"
     }
   }
 }

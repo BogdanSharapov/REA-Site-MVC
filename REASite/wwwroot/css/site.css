@@ -20,3 +20,27 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+/* tab navigation styles */
+.login-logout-card .card-header {
+    padding: 0px 0px 12px 0px; /* Top, right, bottom, left padding */
+}
+
+.login-logout-card ul.nav-tabs {
+    margin: 0px 0px -12px 0px; /* Top, right, bottom, left margin */
+}
+
+.login-logout-card .nav-item {
+    width: 50%; /* Sets width to 50% of parent container */
+}
+
+.login-logout-card .nav-link {
+    font-size: 1rem; /* Font size in rem units */
+    color: #495057; /* Dark gray color for text */
+    text-align: center; /* Centers the text horizontally */
+    padding: 1rem; /* Padding around the link */
+}
+
+.login-logout-card .card-body {
+    padding: 10px 20px
+}
