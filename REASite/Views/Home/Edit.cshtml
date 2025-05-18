@@ -1,20 +1,19 @@
 ﻿@model REASite.Models.Apartment
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Edit";
 }
 
 
-<h1>Create</h1>
+<h1>Edit</h1>
 
 <h4>ApartmentModel</h4>
-<hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create" method="post" enctype="multipart/form-data">
+        <form asp-action="Edit" method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Title" class="form-label"></label>
-                <input asp-for="Title" class="form-control" />
+                <input asp-for="Title" class="form-control"/>
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -71,10 +70,6 @@
             </div>
 
             <h4>Адрес</h4>
-                @* <div class="form-group">
-                    <label for="addressinput">адрес (автодополнение)</label>
-                    <input type="text" id="addressinput" class="form-control" />
-                </div> *@
             <div class="form-group">
                 <label asp-for="Address.Street" class="form-label"></label>
                 <input asp-for="Address.Street" class="form-control" />
@@ -95,16 +90,37 @@
                 <input asp-for="Address.Country" class="form-control" />
                 <span asp-validation-for="Address.Country" class="text-danger"></span>
             </div>
+
             <h4>Изображения</h4>
             <div class="form-group">
-                <label for="images">Загрузить изображения</label>
+                <label>Текущие изображения</label>
+                @if (Model.Images != null && Model.Images.Any())
+                {
+                    <div class="row">
+                        @foreach (var image in Model.Images)
+                        {
+                            <div class="col-md-3 image-container">
+                                <img src="@image.ImageURL" alt="Apartment Image" style="max-width: 100px;" class="image-preview"/>
+                                <button type="button" class="btn btn-danger mt-2 delete-image-btn" data-image-id="@image.Id" data-apartment-id="@Model.Id">Delete</button>
+                            </div>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <p>Нет загруженных изображений.</p>
+                }
+            </div>
+            <div class="form-group">
+                <label for="images">Upload</label>
                 <input type="file" name="images" multiple class="form-control" />
             </div>
 
             <div class="form-group">
-                <input type="submit" value="Создать" class="btn btn-primary" />
+                <input type="submit" value="Сохранить" class="btn btn-primary" />
             </div>
         </form>
+        <input type="hidden" id="deleteImageUrl" value="@Url.Action("DeleteImage", "Home")" />
     </div>
 </div>
 
@@ -112,30 +128,9 @@
     <a asp-action="Index">Back to List</a>
 </div>
 @section Scripts {
+   
     @{
-        // <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=0f52e9c6-8579-4a7e-90da-76fefedfd8a2" type="text/javascript"></script>
-        // <script>
-        //     ymaps.ready(function () {
-        //         var suggestView = new ymaps.SuggestView('addressInput');
-        //         suggestView.events.add('select', function (e) {
-        //             var selectedItem = e.get('item');
-        //             var selectedValue = selectedItem.value;
-        //             ymaps.geocode(selectedValue).then(function (res) {
-        //                 var geoObject = res.geoObjects.get(0);
-        //                 if (geoObject) {
-        //                     var country = geoObject.getCountry();
-        //                     var city = geoObject.getLocalities()[0];
-        //                     var street = geoObject.getThoroughfare();
-        //                     var houseNum = geoObject.getPremiseNumber();
-        //                     document.getElementById('Address_Country').value = country || '';
-        //                     document.getElementById('Address_City').value = city || '';
-        //                     document.getElementById('Address_Street').value = street || '';
-        //                     document.getElementById('Address_HouseNum').value = houseNum || '';
-        //                 }
-        //             });
-        //         });
-        //     });
-        // </script>
+        <script src="~/js/deleteImage.js"></script>
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
 }
