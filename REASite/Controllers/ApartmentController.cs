@@ -1,14 +1,31 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using REASite.Data;
 
 namespace REASite.Controllers
 {
-    public class PropertyController : Controller
+    public class ApartmentController : Controller
     {
-        // GET: PropertyController
-        public ActionResult Index()
+        private readonly ILogger<ApartmentController> _logger;
+        private readonly REASiteDbContext _context;
+
+        public ApartmentController(REASiteDbContext context, ILogger<ApartmentController> logger)
         {
-            return View();
+            _context = context;
+            _logger = logger;
+        }
+
+        public ActionResult Index(int id)
+        {
+            var apartment = _context.Apartments
+        .Include(a => a.Address)
+        .Include(a => a.Images)
+        .FirstOrDefault(a => a.Id == id);
+            if (apartment == null)
+            {
+                return NotFound();
+            }
+            return View(apartment);
         }
 
         // GET: PropertyController/Details/5
