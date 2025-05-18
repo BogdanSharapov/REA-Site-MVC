@@ -11,8 +11,8 @@ using REASite.Data;
 namespace REASite.Migrations
 {
     [DbContext(typeof(REASiteDbContext))]
-    [Migration("20250423150101_AddedRequiredTags")]
-    partial class AddedRequiredTags
+    [Migration("20250504144227_IndexForAddressAdded")]
+    partial class IndexForAddressAdded
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,14 +24,13 @@ namespace REASite.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("REASite.Models.Addres", b =>
+            modelBuilder.Entity("REASite.Models.Address", b =>
                 {
-                    b.Property<string>("HouseIndex")
-                        .HasColumnType("text");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
 
-                    b.Property<string>("ApartmentID")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("City")
                         .IsRequired()
@@ -49,12 +48,15 @@ namespace REASite.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.HasKey("HouseIndex");
+                    b.HasKey("Id");
 
-                    b.ToTable("Addres");
+                    b.HasIndex("Country", "City", "Street", "HouseNum")
+                        .IsUnique();
+
+                    b.ToTable("Addresses");
                 });
 
-            modelBuilder.Entity("REASite.Models.ApartmentModel", b =>
+            modelBuilder.Entity("REASite.Models.Apartment", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -63,9 +65,8 @@ namespace REASite.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("AddresHouseIndex")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<int>("AddressId")
+                        .HasColumnType("integer");
 
                     b.Property<int>("Area")
                         .HasColumnType("integer");
@@ -74,9 +75,8 @@ namespace REASite.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("OfferType")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<int>("OfferType")
+                        .HasColumnType("integer");
 
                     b.Property<byte>("RoomsCount")
                         .HasColumnType("smallint");
@@ -94,25 +94,56 @@ namespace REASite.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AddresHouseIndex");
+                    b.HasIndex("AddressId");
 
                     b.ToTable("Apartments");
                 });
 
-            modelBuilder.Entity("REASite.Models.ApartmentModel", b =>
+            modelBuilder.Entity("REASite.Models.ApartmentComfort", b =>
                 {
-                    b.HasOne("REASite.Models.Addres", "Addres")
-                        .WithMany("Apartment")
-                        .HasForeignKey("AddresHouseIndex")
+                    b.Property<int>("ApartmentId")
+                        .HasColumnType("integer")
+                        .HasColumnOrder(1);
+
+                    b.Property<int>("Comfort")
+                        .HasColumnType("integer")
+                        .HasColumnOrder(2);
+
+                    b.HasKey("ApartmentId", "Comfort");
+
+                    b.ToTable("ApartmentComfort");
+                });
+
+            modelBuilder.Entity("REASite.Models.Apartment", b =>
+                {
+                    b.HasOne("REASite.Models.Address", "Address")
+                        .WithMany("Apartments")
+                        .HasForeignKey("AddressId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Addres");
+                    b.Navigation("Address");
                 });
 
-            modelBuilder.Entity("REASite.Models.Addres", b =>
+            modelBuilder.Entity("REASite.Models.ApartmentComfort", b =>
                 {
+                    b.HasOne("REASite.Models.Apartment", "Apartment")
+                        .WithMany("ApartmentComforts")
+                        .HasForeignKey("ApartmentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Apartment");
+                });
+
+            modelBuilder.Entity("REASite.Models.Address", b =>
+                {
+                    b.Navigation("Apartments");
+                });
+
+            modelBuilder.Entity("REASite.Models.Apartment", b =>
+                {
+                    b.Navigation("ApartmentComforts");
                 });
 #pragma warning restore 612, 618
         }
