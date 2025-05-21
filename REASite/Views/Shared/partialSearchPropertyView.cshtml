@@ -1,9 +1,33 @@
-﻿@{
-}
-<section id="search-property">
-    <h2>Поиск объектов</h2>
-    <input type="text" id="search-type" placeholder="Тип сделки">
-    <input type="number" id="search-rooms" placeholder="Комнаты">
-    <input type="number" id="search-area" placeholder="Площадь">
-    <button id="search-button">Поиск</button>
-</section>
+﻿@using System.Reflection
+@using System.ComponentModel.DataAnnotations
+<form method="get" asp-controller="Home" asp-action="Index">
+    <div class="form-row">
+        <div class="col">
+            <input type="text" class="form-control" name="search" placeholder="Поиск по названию или описанию">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" name="city" placeholder="Город">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" name="minPrice" placeholder="Мин. цена">
+        </div>
+        <div class="col">
+            <input type="number" class="form-control" name="maxPrice" placeholder="Макс. цена">
+        </div>
+        <div class="col">
+            <select class="form-control" name="offerType">
+                <option value="">Все</option>
+                @foreach (var type in Enum.GetValues(typeof(OfferTypeEnum)).Cast<OfferTypeEnum>())
+                {
+                    var displayName = type.GetType()
+                    .GetMember(type.ToString())[0]
+                    .GetCustomAttribute<DisplayAttribute>()?.Name ?? type.ToString();
+                    <option value="@type.ToString()">@displayName</option>
+                }
+            </select>
+        </div> 
+        <div class="col">
+            <button type="submit" class="btn btn-primary">Поиск</button>
+        </div>
+    </div>
+</form>

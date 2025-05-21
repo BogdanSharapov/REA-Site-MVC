@@ -1,9 +1,11 @@
 using System.Diagnostics;
+using System.Linq;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using REASite.Data;
 using REASite.Models;
+using ImageStorage;
 
 namespace REASite.Controllers
 {
@@ -12,20 +14,55 @@ namespace REASite.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly REASiteDbContext _context;
+        private readonly IImageService _imageService;
 
-        public HomeController(REASiteDbContext context, ILogger<HomeController> logger)
+        public HomeController(REASiteDbContext context, ILogger<HomeController> logger, IImageService imageService)
         {
             _context = context;
             _logger = logger;
+            _imageService = imageService;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index(string search, string city, int? minPrice, int? maxPrice,  string offerType, string type = "Rent")
         {
-            List<Apartment> ApartmentsList = _context.Apartments
+            if (!Enum.TryParse<OfferTypeEnum>(type, true, out var pageType))
+            {
+                pageType = OfferTypeEnum.Rent;
+                type = "Rent";
+            }
+            var apartments = _context.Apartments
                 .Include(a => a.Address)
                 .Include(a => a.ApartmentComforts)
                 .Include(a => a.Images)
-                .ToList();
-            return View(ApartmentsList);
+                .Where(a => a.OfferType == pageType &&
+                           a.Images != null && 
+                           a.Address != null) 
+                .AsQueryable();
+
+            if (!string.IsNullOrEmpty(search))
+            {
+                apartments = apartments.Where(a => a.Title.Contains(search) || a.Description.Contains(search));
+            }
+
+            if (!string.IsNullOrEmpty(city))
+            {
+                apartments = apartments.Where(a => a.Address.City.Contains(city));
+            }
+
+            if (minPrice.HasValue)
+            {
+                apartments = apartments.Where(a => a.Price >= minPrice.Value);
+            }
+
+            if (maxPrice.HasValue)
+            {
+                apartments = apartments.Where(a => a.Price <= maxPrice.Value);
+            }
+            if (!string.IsNullOrEmpty(offerType) && Enum.TryParse<OfferTypeEnum>(offerType, out var offerTypeEnum))
+            {
+                apartments = apartments.Where(a => a.OfferType == offerTypeEnum);
+            }
+
+            return View(await apartments.ToListAsync());
         }
 
 
@@ -44,7 +81,7 @@ namespace REASite.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Apartment apartment, IFormFile[] images, int[] Comforts)
+        public async Task<IActionResult> Create(Apartment apartment, List<IFormFile> images, int[] Comforts)
         {
             if (ModelState.IsValid)
             {
@@ -77,27 +114,23 @@ namespace REASite.Controllers
                         apartment.AddressId = apartment.Address.Id;
                     }
 
-                    if (images != null && images.Length > 0)
+                    if (images != null && images.Count > 0)
                     {
-                        var imagesPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images");
-                        if (!Directory.Exists(imagesPath))
-                        {
-                            Directory.CreateDirectory(imagesPath);
-                        }
-
                         foreach (var image in images)
                         {
                             if (image.Length > 0)
                             {
-                                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(image.FileName);
-                                var filePath = Path.Combine(imagesPath, fileName);
-
-                                using (var stream = new FileStream(filePath, FileMode.Create))
+                                using (var stream = image.OpenReadStream())
                                 {
-                                    await image.CopyToAsync(stream);
-                                }
+                                    // Сохраняем в LiteDB и получаем ID
+                                    var imageId = await _imageService.SaveImageAsync(stream, image.FileName, image.ContentType);
 
-                                apartment.Images.Add(new ApartmentImage { ImageURL = "/images/" + fileName });
+                                    // Сохраняем ID в PostgreSQL
+                                    apartment.Images.Add(new ApartmentImage
+                                    {
+                                        ImageID = imageId
+                                    });
+                                }
                             }
                         }
                     }
@@ -141,7 +174,7 @@ namespace REASite.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Apartment apartment, IFormFile[] images, int[] Comforts)
+        public async Task<IActionResult> Edit(int id, Apartment apartment, List<IFormFile> images, int[] Comforts)
         {
             if (id != apartment.Id)
             {
@@ -200,7 +233,7 @@ namespace REASite.Controllers
 
                     //Обработка изображений
                     // Добавление новых изображений
-                    if (images != null && images.Length > 0)
+                    if (images != null && images.Count > 0)
                     {
                         var imagesPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images");
                         if (!Directory.Exists(imagesPath))
@@ -210,17 +243,14 @@ namespace REASite.Controllers
 
                         foreach (var image in images)
                         {
-                            if (image.Length > 0)
+                            using (var stream = image.OpenReadStream())
                             {
-                                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(image.FileName);
-                                var filePath = Path.Combine(imagesPath, fileName);
-
-                                using (var stream = new FileStream(filePath, FileMode.Create))
+                                var imageId = await _imageService.SaveImageAsync(stream, image.FileName, image.ContentType);
+                                _context.ApartmentImages.Add(new ApartmentImage
                                 {
-                                    await image.CopyToAsync(stream);
-                                }
-
-                                existingApartment.Images.Add(new ApartmentImage { ImageURL = "/images/" + fileName });
+                                    ApartmentId = apartment.Id,
+                                    ImageID = imageId
+                                });
                             }
                         }
                     }
@@ -345,13 +375,13 @@ namespace REASite.Controllers
 
             try
             {
-                var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", image.ImageURL.TrimStart('/'));
-                if (System.IO.File.Exists(filePath))
-                {
-                    System.IO.File.Delete(filePath);
-                }
+                // Удаление изображения из LiteDB  
+                await _imageService.DeleteImageAsync(image.ImageID);
+
+                // Удаление записи из PostgreSQL  
                 _context.ApartmentImages.Remove(image);
                 await _context.SaveChangesAsync();
+
                 _logger.LogInformation("Удалено изображение с ID {ImageId} для квартиры ID {ApartmentId}", imageId, apartmentId);
             }
             catch (Exception ex)
@@ -361,7 +391,7 @@ namespace REASite.Controllers
             }
 
             return RedirectToAction("Edit", new { id = apartmentId });
-        }
+        }  
         public IActionResult Privacy()
         {
             return View();

@@ -1,17 +1,28 @@
-﻿@{
-    ViewData["Title"] = "Здесь и Сейчас";
+﻿@model IEnumerable<Apartment>
+@{
+    string type = ViewBag.Type ?? "Rent";
 }
 
-<div class="text-center">
-    <main>
-        <form method="get" asp-controller="Api" asp-action="Index">
+<div class="container mt-4">
+        <form method="get" asp-controller="Home" asp-action="Index">
         @{await Html.RenderPartialAsync("partialSearchPropertyView");}
         </form>
+        <ul class="nav nav-tabs mb-4">
+            <li class="nav-item">
+                <a class="nav-link @(type.ToLower() == "rent" ? "active" : "")" href="/rent">Аренда</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link @(type.ToLower() == "sale" ? "active" : "")" href="/sale">Продажа</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link @(type.ToLower() == "dailyrent" ? "active" : "")" href="/dailyrent">Посуточная аренда</a>
+            </li>
+        </ul>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
         <form method="get" asp-controller="Home" asp-action="Index">
-            @{await Html.RenderPartialAsync("partialCardGridView");}
+            @{await Html.RenderPartialAsync("partialCardGridView", Model);}
         </form>
-
-    </main>
+        </div>
 </div>
 
 @Html.AntiForgeryToken()

@@ -99,10 +99,10 @@
                     <div class="row">
                         @foreach (var image in Model.Images)
                         {
-                            <div class="col-md-3 image-container">
+                            @* <div class="col-md-3 image-container">
                                 <img src="@image.ImageURL" alt="Apartment Image" style="max-width: 100px;" class="image-preview"/>
                                 <button type="button" class="btn btn-danger mt-2 delete-image-btn" data-image-id="@image.Id" data-apartment-id="@Model.Id">Delete</button>
-                            </div>
+                            </div> *@
                         }
                     </div>
                 }

@@ -5,6 +5,8 @@ VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REASite", "REASite\REASite.csproj", "{59CBB418-63C3-4696-80E7-CB007D5ADFA1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageStorage", "ImageStorage\ImageStorage.csproj", "{31094F05-BB94-4C8C-A9FD-79DCD7CCA27C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{59CBB418-63C3-4696-80E7-CB007D5ADFA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59CBB418-63C3-4696-80E7-CB007D5ADFA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59CBB418-63C3-4696-80E7-CB007D5ADFA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31094F05-BB94-4C8C-A9FD-79DCD7CCA27C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31094F05-BB94-4C8C-A9FD-79DCD7CCA27C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31094F05-BB94-4C8C-A9FD-79DCD7CCA27C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31094F05-BB94-4C8C-A9FD-79DCD7CCA27C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

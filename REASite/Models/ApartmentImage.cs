@@ -11,6 +11,6 @@ namespace REASite.Models
         public int ApartmentId { get; set; }
         public Apartment Apartment { get; set; } = null!;
         [Required]
-        public string ImageURL { get; set; } = string.Empty;
+        public string ImageID { get; set; } = string.Empty;
     }
 }

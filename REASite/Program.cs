@@ -2,14 +2,16 @@ using Microsoft.EntityFrameworkCore;
 using REASite.Data;
 using Microsoft.AspNetCore.Identity;
 using REASite.Areas.Identity.Data;
-
+using ImageStorage;
+using LiteDB;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
-builder.Services.Configure<IdentityOptions>(options =>
+builder.Services.AddSingleton<LiteDatabase>(sp => new LiteDatabase(builder.Configuration.GetConnectionString("LiteDb")));
+builder.Services.AddTransient<IImageService, LiteDbImageService>(); builder.Services.Configure<IdentityOptions>(options =>
 {
     options.Password.RequireUppercase = false;
 });
@@ -50,6 +52,12 @@ app.UseAuthorization();
 
 DbInitializer.Initialize(app.Services);
 
+app.MapControllerRoute(
+    name: "typeRoute",
+    pattern: "{type}",
+    defaults: new { controller = "Home", action = "Index" },
+    constraints: new { type = "rent|sale|dailyrent" }
+);
 
 app.MapControllerRoute(
     name: "default",

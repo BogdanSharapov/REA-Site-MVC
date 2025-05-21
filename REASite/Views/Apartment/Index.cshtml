@@ -6,71 +6,45 @@
   <div class="container my-4">
     <!-- Блок фотографий -->
     <section id="photo-gallery">
-      <div id="propertyCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#propertyCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Фото 1"></button>
-          <button type="button" data-bs-target="#propertyCarousel" data-bs-slide-to="1" aria-label="Фото 2"></button>
-          <button type="button" data-bs-target="#propertyCarousel" data-bs-slide-to="2" aria-label="Фото 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-                        @if (Model.Images != null && Model.Images.Any())
+            <div id="propertyCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    @for (int i = 0; i < Model.Images.Count; i++)
+                    {
+                        <button type="button" data-bs-target="#propertyCarousel" data-bs-slide-to="@i" class="@(i == 0 ? "active" : "")" aria-current="@(i == 0 ? "true" : "false")" aria-label="Slide @i"></button>
+                    }
+                </div>
+                <div class="carousel-inner">
+                    @if (Model.Images != null && Model.Images.Any())
+                    {
+                        @foreach (var image in Model.Images)
                         {
-                            @foreach (var image in Model.Images)
-                            {
-                                
-                                    <img src="@image.ImageURL" class="d-block w-100" alt="@Model.Title" loading="lazy" />
-                            }
-                        }
-                        else
-                        {
-                            <div class="carousel-item active">
-                                <img src="/images/placeholder.jpg" class="d-block w-100" alt="Нет фото">
+                            <div class="carousel-item @(image == Model.Images.First() ? "active" : "")">
+                                <img src="@Url.Action("Get", "Image", new { imageId = image.ImageID })"
+                                     class="d-block w-100"
+                                     alt="@Model.Title"
+                                     loading="lazy" />
                             </div>
                         }
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#propertyCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Предыдущий</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#propertyCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Следующий</span>
-        </button>
-      </div>
-    </section>
-
-
-        @*<div id="carousel_@apartment.Id" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                @if (apartment.Images != null && apartment.Images.Any())
-                {
-                    @foreach (var image in apartment.Images)
+                    }
+                    else
                     {
-                        <div class="carousel-item @(image == apartment.Images.First() ? "active" : "")">
-                            <img src="@image.ImageURL" class="d-block w-100" alt="@apartment.Title" loading="lazy" />
+                        <div class="carousel-item active">
+                            <img src="@Url.Content("~/images/placeholder.jpg")"
+                                 class="d-block w-100"
+                                 alt="Нет фото">
                         </div>
                     }
-                }
-                else
-                {
-                    <div class="carousel-item active">
-                        <img src="/images/placeholder.jpg" class="d-block w-100" alt="Нет фото">
-                    </div>
-                }
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#propertyCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Предыдущий</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#propertyCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Следующий</span>
+                </button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel_@apartment.Id" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel_@apartment.Id" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>*@
-
-
+    </section>
     <!-- Описание и характеристики объекта -->
     <section id="property-details" class="mb-4">
       <h2>Описание недвижимости</h2>
@@ -87,7 +61,7 @@
           </tr>
           <tr>
             <th scope="row">Этаж</th>
-            <td>5</td>
+            <td>@Model.Floor</td>
           </tr>
           <tr>
             <th scope="row">Количество комнат</th>
@@ -95,7 +69,7 @@
           </tr>
           <tr>
             <th scope="row">Стоимость</th>
-            <td>10 000 000 руб.</td>
+            <td>@Model.Price &#8381;</td>
           </tr>
           <tr>
             <th scope="row">Год постройки</th>
@@ -104,55 +78,5 @@
         </tbody>
       </table>
     </section>
-
-    <!-- Отзывы, комментарии и рейтинг -->
-    <section id="reviews" class="mb-4">
-      <h2>Отзывы и комментарии</h2>
-      
-      <!-- Рейтинг объекта -->
-      <div class="mb-3">
-        <label class="form-label">Рейтинг:</label>
-        <div>
-          <span class="badge bg-success">4.5/5</span>
-        </div>
-      </div>
-      
-      <!-- Список комментариев -->
-      <div class="mb-4">
-        <div class="card mb-3">
-          <div class="card-body">
-            <h5 class="card-title">Алексей</h5>
-            <p class="card-text">Очень понравилась квартира, всё соответствует описанию!</p>
-            <p class="card-text"><small class="text-muted">2 дня назад</small></p>
-          </div>
-        </div>
-        <div class="card mb-3">
-          <div class="card-body">
-            <h5 class="card-title">Мария</h5>
-            <p class="card-text">Удобное расположение и качественная отделка. Рекомендую!</p>
-            <p class="card-text"><small class="text-muted">Неделя назад</small></p>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Форма для добавления нового комментария -->
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Добавить комментарий</h5>
-          <form>
-            <div class="mb-3">
-              <label for="commentName" class="form-label">Имя</label>
-              <input type="text" class="form-control" id="commentName" placeholder="Ваше имя">
-            </div>
-            <div class="mb-3">
-              <label for="commentText" class="form-label">Комментарий</label>
-              <textarea class="form-control" id="commentText" rows="3" placeholder="Ваш комментарий"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Отправить</button>
-          </form>
-        </div>
-      </div>
-    </section>
   </div>
-
 }
