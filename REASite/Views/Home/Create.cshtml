@@ -52,12 +52,6 @@
                 </select>
                 <span asp-validation-for="OfferType" class="text-danger"></span>
             </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="isFavorite" /> @Html.DisplayNameFor(model => model.isFavorite)
-                </label>
-            </div>
-
             <h4>Удобства</h4>
             <div class="form-group">
                 @foreach (var comfort in Enum.GetValues(typeof(ComfortEnum)).Cast<ComfortEnum>())

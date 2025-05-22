@@ -11,15 +11,14 @@ namespace REASite.Data
         public DbSet<Apartment> Apartments { get; set; } = null!;
         public DbSet<Address> Addresses { get; set; } = null!;
         public DbSet<ApartmentImage> ApartmentImages { get; set; } = null!;
+        public DbSet<Booking> Bookings { get; set; } = null!;
+
+        public DbSet<Favorites> Favorites { get; set; }
 
         public REASiteDbContext(DbContextOptions<REASiteDbContext> options) : base(options)
         {
 
         }
-
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -47,6 +46,26 @@ namespace REASite.Data
             modelBuilder.Entity<Address>()
                 .HasIndex(a => new { a.Country, a.City, a.Street, a.HouseNum })
                 .IsUnique();
+
+            modelBuilder.Entity<Booking>()
+               .HasOne(b => b.Apartment)
+               .WithMany(a => a.Bookings)
+               .HasForeignKey(b => b.ApartmentId);
+
+            modelBuilder.Entity<Booking>()
+                .HasOne(b => b.User)
+                .WithMany()
+                .HasForeignKey(b => b.UserId);
+
+            modelBuilder.Entity<Favorites>()
+            .HasOne(f => f.User)
+            .WithMany()
+            .HasForeignKey(f => f.UserId);
+
+            modelBuilder.Entity<Favorites>()
+                .HasOne(f => f.Apartment)
+                .WithMany(a => a.Favorites)
+                .HasForeignKey(f => f.ApartmentId);
 
             //modelBuilder.Entity<SiteUser>()
             //.Property(u => u.Gender)

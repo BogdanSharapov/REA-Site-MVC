@@ -1,0 +1,23 @@
+﻿@model REASite.ViewModel.BookingViewModel
+<h2>Бронирование квартиры</h2>
+<form asp-action="Book" method="post">
+    <input type="hidden" name="ApartmentId" value="@Model.ApartmentId" />
+    <div class="form-group">
+        <label for="StartDate">Дата начала бронирования</label>
+        <input type="date" name="StartDate" class="form-control" value="@Model.StartDate.ToString("yyyy-MM-dd")" required />
+    </div>
+    <div class="form-group">
+        <label for="EndDate">Дата окончания бронирования</label>
+        <input type="date" name="EndDate" class="form-control" value="@Model.EndDate.ToString("yyyy-MM-dd")" required />
+    </div>
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div class="alert alert-danger">
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <p>@error.ErrorMessage</p>
+            }
+        </div>
+    }
+    <button type="submit" class="btn btn-primary">Забронировать</button>
+</form>  

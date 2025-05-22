@@ -1,0 +1,24 @@
+﻿@using REASite.ViewModel;
+@model List<UserRolesViewModel>
+<h2>Список пользователей</h2>  
+<table class="table">  
+    <thead>  
+        <tr>  
+            <th>Имя пользователя</th>  
+            <th>Текущие роли</th>  
+            <th>Действия</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        @foreach (var user in Model)  
+        {  
+            <tr>  
+                <td>@user.Username</td>  
+                <td>@string.Join(", ", user.Roles)</td>  
+                <td>  
+                    <a asp-action="ManageRoles" asp-route-id="@user.UserId">Управление ролями</a>  
+                </td>  
+            </tr>  
+        }  
+    </tbody>  
+</table>

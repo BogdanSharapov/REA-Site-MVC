@@ -1344,8 +1344,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>39qt9ltyy3</Fingerprint>
-      <Integrity>J5fi2Ryaf3QxFAXz+mcfuRMiYTV9miVwvopiGjULl2U=</Integrity>
+      <Fingerprint>atnfj9629s</Fingerprint>
+      <Integrity>skLuah/OBoaRESr/JZGlHqTgUhnByUgvXYw5pwnl7Fc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\deleteModal.js'))</OriginalItemSpec>

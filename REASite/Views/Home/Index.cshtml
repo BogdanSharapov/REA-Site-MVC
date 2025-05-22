@@ -1,6 +1,20 @@
-﻿@model IEnumerable<Apartment>
+﻿@model IQueryable<Apartment>
+@using Microsoft.EntityFrameworkCore
+@inject Microsoft.AspNetCore.Identity.UserManager<REASite.Areas.Identity.Data.SiteUser> _userManager
+@inject REASite.Data.REASiteDbContext _context
 @{
     string type = ViewBag.Type ?? "Rent";
+
+    var user = User.Identity.IsAuthenticated ? await _userManager.GetUserAsync(User) : null;
+    var favoriteIds = user != null
+        ? await _context.Favorites
+            .Where(f => f.UserId == user.Id)
+            .Select(f => f.ApartmentId)
+            .ToListAsync()
+        : new List<int>();
+
+    // Материализуем IQueryable в список
+    var apartments = await Model.ToListAsync();
 }
 
 <div class="container mt-4">
@@ -18,10 +32,13 @@
                 <a class="nav-link @(type.ToLower() == "dailyrent" ? "active" : "")" href="/dailyrent">Посуточная аренда</a>
             </li>
         </ul>
-        <div class="row row-cols-1 row-cols-md-2 g-4">
-        <form method="get" asp-controller="Home" asp-action="Index">
-            @{await Html.RenderPartialAsync("partialCardGridView", Model);}
-        </form>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+        @foreach (var apartment in apartments)
+        {
+            <div class="col-md-4 mb-4">
+                <partial name="partialCardGridView" model="apartment" view-data="@(new ViewDataDictionary(ViewData) { { "IsFavorite", favoriteIds.Contains(apartment.Id) } })" />
+            </div>
+        }
         </div>
 </div>
 
@@ -70,6 +87,15 @@
                     const url = this.getAttribute('data-detail-url');
                     if (url) {
                         window.location.href = url;
+                    }
+                });
+
+                card.addEventListener('contextmenu', function(event) {
+                    event.preventDefault();
+                    const deleteUrl = this.getAttribute('data-delete-url');
+                    if (deleteUrl) {
+                        document.getElementById('deleteModal').setAttribute('data-delete-url', deleteUrl);
+                        new bootstrap.Modal(document.getElementById('deleteModal')).show();
                     }
                 });
             });

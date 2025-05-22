@@ -1,16 +1,52 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using REASite.Areas.Identity.Data;
+using REASite.Data;
+using REASite.Models;
+using REASite.ViewModel;
+using System.Threading.Tasks;
 
-namespace REASite.Controllers
+[Authorize]
+public class AccountController : Controller
 {
-    public class AccountController : Controller
+    private readonly REASiteDbContext _context;
+    private readonly UserManager<SiteUser> _userManager;
+
+    public AccountController(REASiteDbContext context, UserManager<SiteUser> userManager)
     {
-        public IActionResult Register()
+        _context = context;
+        _userManager = userManager;
+    }
+
+    public async Task<IActionResult> Index()
+    {
+        var user = await _userManager.GetUserAsync(User);
+        if (user == null)
         {
-            return View();
+            return NotFound();
         }
-        public IActionResult Login()
+
+        var favorites = await _context.Favorites
+             .Include(f => f.Apartment)
+             .ThenInclude(a => a.Address)
+             .Where(f => f.UserId == user.Id)
+             .Select(f => f.Apartment)
+             .ToListAsync();
+
+        var bookings = await _context.Bookings
+            .Include(b => b.Apartment)
+            .ThenInclude(a => a.Address)
+            .Where(b => b.UserId == user.Id)
+            .ToListAsync();
+
+        var viewModel = new AccountViewModel
         {
-            return View();
-        }
+            Favorites = favorites,
+            Bookings = bookings
+        };
+
+        return View(viewModel);
     }
 }

@@ -21,7 +21,7 @@ namespace REASite.Models
         [Required]
         public ushort Area { get; set; }
         public byte RoomsCount { get; set; }
-        public bool isFavorite { get; set; }
+        public List<Favorites> Favorites { get; set; } = new List<Favorites>();
         public List<ApartmentImage> Images { get; set; } = new List<ApartmentImage>();
         public OfferTypeEnum OfferType { get; set; }
 
@@ -29,6 +29,7 @@ namespace REASite.Models
         public int AddressId { get; set; }
         [Required]
         public Address Address { get; set; } = new Address();
+        public List<Booking> Bookings { get; set; } = new List<Booking>();
         public ICollection<ApartmentComfort>? ApartmentComforts { get; set; } = new List<ApartmentComfort>();
     }
 }

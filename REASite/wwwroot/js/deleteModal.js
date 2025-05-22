@@ -1,52 +1,44 @@
 ﻿document.addEventListener('DOMContentLoaded', function () {
-    // Получаем элементы модального окна и кнопки подтверждения
-    var modal = document.getElementById('deleteModal');
-    var confirmButton = document.getElementById('confirmDelete');
-    // Получаем CSRF-токен из скрытого поля
-    var token = document.querySelector('input[name="__RequestVerificationToken"]').value;
+    const deleteModal = document.getElementById('deleteModal');
+    const confirmDeleteBtn = document.getElementById('confirmDelete');
 
-    // Событие при открытии модального окна
-    modal.addEventListener('show.bs.modal', function (event) {
-        // Получаем кнопку, вызвавшую модальное окно
-        var button = event.relatedTarget;
-        // Извлекаем URL для удаления и тип объекта
-        var deleteUrl = button.getAttribute('data-delete-url');
-        var itemType = button.getAttribute('data-item-type');
-        // Находим тело модального окна
-        var modalBody = modal.querySelector('.modal-body');
-        // Устанавливаем динамическое сообщение
-        modalBody.textContent = `Вы уверены, что хотите удалить ${itemType === 'apartment' ? 'эту квартиру' : 'этот объект'}?`;
-        // Сохраняем URL в кнопке подтверждения
-        confirmButton.setAttribute('data-delete-url', deleteUrl);
+    document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('click', function (event) {
+            if (event.target.closest('.carousel') || event.target.closest('.btn')) {
+                return;
+            }
+            const url = this.getAttribute('data-detail-url');
+            if (url) {
+                window.location.href = url;
+            }
+        });
+
+        card.addEventListener('contextmenu', function (event) {
+            event.preventDefault();
+            const deleteUrl = this.getAttribute('data-delete-url');
+            if (deleteUrl) {
+                deleteModal.setAttribute('data-delete-url', deleteUrl);
+                new bootstrap.Modal(deleteModal).show();
+            }
+        });
     });
 
-    // Событие при нажатии на кнопку "Удалить"
-    confirmButton.addEventListener('click', function () {
-        // Получаем URL для удаления
-        var deleteUrl = this.getAttribute('data-delete-url');
-        // Отправляем POST-запрос
-        fetch(deleteUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            body: new URLSearchParams({
-                '__RequestVerificationToken': token
-            }).toString()
-        })
-            .then(response => {
-                if (response.ok) {
-                    // Перезагружаем страницу при успешном удалении
-                    location.reload();
-                } else {
-                    // Показываем сообщение об ошибке
-                    alert('Не удалось удалить объект.');
+    confirmDeleteBtn.addEventListener('click', async function () {
+        const deleteUrl = deleteModal.getAttribute('data-delete-url');
+        if (deleteUrl) {
+            const response = await fetch(deleteUrl, {
+                method: 'POST',
+                headers: {
+                    'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]').value
                 }
-            })
-            .catch(error => {
-                // Логируем ошибку и показываем сообщение
-                console.error('Ошибка:', error);
-                alert('Произошла ошибка при удалении объекта.');
             });
+            if (response.ok) {
+                const card = document.querySelector(`[data-delete-url="${deleteUrl}"]`);
+                if (card) card.remove();
+            } else {
+                alert('Ошибка при удалении.');
+            }
+            bootstrap.Modal.getInstance(deleteModal).hide();
+        }
     });
-});
+})

@@ -6,6 +6,8 @@ using Microsoft.EntityFrameworkCore;
 using REASite.Data;
 using REASite.Models;
 using ImageStorage;
+using Microsoft.AspNetCore.Identity;
+using REASite.Areas.Identity.Data;
 
 namespace REASite.Controllers
 {
@@ -15,6 +17,7 @@ namespace REASite.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly REASiteDbContext _context;
         private readonly IImageService _imageService;
+        private readonly UserManager<SiteUser> _userManager;
 
         public HomeController(REASiteDbContext context, ILogger<HomeController> logger, IImageService imageService)
         {
@@ -62,7 +65,56 @@ namespace REASite.Controllers
                 apartments = apartments.Where(a => a.OfferType == offerTypeEnum);
             }
 
-            return View(await apartments.ToListAsync());
+            ViewBag.Type = type;
+            return View (apartments);
+        }
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> AddToFavorites(int apartmentId)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return Unauthorized();
+            }
+
+            var existingFavorite = await _context.Favorites
+                .FirstOrDefaultAsync(f => f.UserId == user.Id && f.ApartmentId == apartmentId);
+
+            if (existingFavorite == null)
+            {
+                var favorite = new Favorites
+                {
+                    UserId = user.Id,
+                    ApartmentId = apartmentId
+                };
+                _context.Favorites.Add(favorite);
+                await _context.SaveChangesAsync();
+            }
+
+            return RedirectToAction("Index");
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> RemoveFromFavorites(int apartmentId)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return Unauthorized();
+            }
+
+            var favorite = await _context.Favorites
+                .FirstOrDefaultAsync(f => f.UserId == user.Id && f.ApartmentId == apartmentId);
+
+            if (favorite != null)
+            {
+                _context.Favorites.Remove(favorite);
+                await _context.SaveChangesAsync();
+            }
+
+            return RedirectToAction("Index");
         }
 
 
@@ -291,7 +343,7 @@ namespace REASite.Controllers
                         existingApartment.Area = apartment.Area;
                         existingApartment.RoomsCount = apartment.RoomsCount;
                         existingApartment.OfferType = apartment.OfferType;
-                        existingApartment.isFavorite = apartment.isFavorite;
+                        
                         existingApartment.Address.Country = apartment.Address.Country;
                         existingApartment.Address.City = apartment.Address.City;
                         existingApartment.Address.Street = apartment.Address.Street;

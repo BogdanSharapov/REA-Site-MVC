@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using REASite.Data;
@@ -11,9 +12,11 @@ using REASite.Data;
 namespace REASite.Migrations
 {
     [DbContext(typeof(REASiteDbContext))]
-    partial class REASiteDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250522184349_AddedBookinginContext")]
+    partial class AddedBookinginContext
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -303,6 +306,9 @@ namespace REASite.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<bool>("isFavorite")
+                        .HasColumnType("boolean");
+
                     b.HasKey("Id");
 
                     b.HasIndex("AddressId");
@@ -379,30 +385,6 @@ namespace REASite.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Bookings");
-                });
-
-            modelBuilder.Entity("REASite.Models.Favorites", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("ApartmentId")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ApartmentId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Favorites");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -508,25 +490,6 @@ namespace REASite.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("REASite.Models.Favorites", b =>
-                {
-                    b.HasOne("REASite.Models.Apartment", "Apartment")
-                        .WithMany("Favorites")
-                        .HasForeignKey("ApartmentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("REASite.Areas.Identity.Data.SiteUser", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Apartment");
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("REASite.Models.Address", b =>
                 {
                     b.Navigation("Apartments");
@@ -537,8 +500,6 @@ namespace REASite.Migrations
                     b.Navigation("ApartmentComforts");
 
                     b.Navigation("Bookings");
-
-                    b.Navigation("Favorites");
 
                     b.Navigation("Images");
                 });

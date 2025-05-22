@@ -1,0 +1,35 @@
+﻿@using REASite.ViewModel
+@model ManageRolesViewModel
+<h2>Управление ролями для @Model.Username</h2>
+
+<h3>Добавить роль</h3>
+<form asp-action="AddRole" method="post">
+    <input type="hidden" name="userId" value="@Model.UserId" />
+    <select name="roleName">
+        @foreach (var role in Model.AllRoles.Except(Model.CurrentRoles))
+        {
+            <option value="@role">@role</option>
+        }
+    </select>
+    <button type="submit" class="btn btn-primary">Добавить роль</button>
+</form>
+
+<h3>Удалить роль</h3>
+<form asp-action="RemoveRole" method="post">
+    <input type="hidden" name="userId" value="@Model.UserId" />
+    @if (!Model.CurrentRoles.Any())
+    {
+        <p>Нет ролей для удаления.</p>
+    }
+    else
+    {
+        @foreach (var role in Model.CurrentRoles)
+        {
+            <div class="form-check">
+                <input type="checkbox" name="rolesToRemove" value="@role" class="form-check-input" />
+                <label class="form-check-label">@role</label>
+            </div>
+        }
+        <button type="submit" class="btn btn-primary">Удалить выбранные роли</button>
+    }
+</form>
