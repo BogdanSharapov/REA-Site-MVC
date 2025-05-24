@@ -23,19 +23,23 @@
             await Html.RenderPartialAsync("partialSearchPropertyView");
         }
     </form>
-    <ul class="nav nav-tabs mb-4">
-        <li class="nav-item">
-            <a class="nav-link @(type.ToLower() == "rent" ? "active" : "")" href="/rent">Аренда</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link @(type.ToLower() == "sale" ? "active" : "")" href="/sale">Продажа</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link @(type.ToLower() == "dailyrent" ? "active" : "")" href="/dailyrent">Посуточная аренда</a>
-        </li>
-    </ul>
+
+    <div class="tabs-container mb-4">
+        <ul class="nav nav-tabs justify-content-center border-0">
+            <li class="nav-item mx-1">
+                <a class="nav-link custom-tab @(type.ToLower() == "rent" ? "active" : "")" href="/rent">Аренда</a>
+            </li>
+            <li class="nav-item mx-1">
+                <a class="nav-link custom-tab @(type.ToLower() == "sale" ? "active" : "")" href="/sale">Продажа</a>
+            </li>
+            <li class="nav-item mx-1">
+                <a class="nav-link custom-tab @(type.ToLower() == "dailyrent" ? "active" : "")" href="/dailyrent">Посуточная аренда</a>
+            </li>
+        </ul>
+    </div>
+
     @await Html.PartialAsync("partialCardGridView", apartments,
-       new ViewDataDictionary(ViewData) { { "FavoriteIds", favoriteIds } })
+            new ViewDataDictionary(ViewData) { { "FavoriteIds", favoriteIds } })
 </div>
 
 @Html.AntiForgeryToken()
@@ -70,6 +74,39 @@
 
     .col-md-4.mb-4 {
         transition: opacity 0.3s ease;
+    }
+
+    /*type filter bar*/
+    .tabs-container {
+        border-bottom: 2px solid #dee2e6; /* Разделительная линия */
+        padding-bottom: 1rem;
+        margin-top: 2rem;
+    }
+
+    .custom-tab {
+        border: 2px solid #dee2e6 !important;
+        border-radius: 20px !important;
+        margin: 0 4px;
+        color: #666;
+        transition: all 0.3s ease;
+        background: white;
+        padding: 8px 25px !important;
+    }
+
+        .custom-tab:hover {
+            background: black !important;
+            color: white !important;
+            border-color: black !important;
+        }
+
+        .custom-tab.active {
+            background: black !important;
+            color: white !important;
+            border-color: black !important;
+        }
+
+    .nav-tabs {
+        border: none;
     }
 </style>
 

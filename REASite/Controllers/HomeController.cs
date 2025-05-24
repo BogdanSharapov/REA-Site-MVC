@@ -425,13 +425,13 @@ namespace REASite.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteImage(string imageId, int apartmentId)
+        public async Task<IActionResult> DeleteImage([FromBody] DeleteImageRequest request)
         {
             try
             {
                 // Находим связь изображения с квартирой
                 var apartmentImage = await _context.ApartmentImages
-                    .FirstOrDefaultAsync(ai => ai.ImageID == imageId && ai.ApartmentId == apartmentId);
+                    .FirstOrDefaultAsync(ai => ai.ImageID == request.ImageId && ai.ApartmentId == request.ApartmentId);
 
                 if (apartmentImage == null)
                     return NotFound();
@@ -442,12 +442,12 @@ namespace REASite.Controllers
 
                 // Проверяем, используется ли изображение в других квартирах
                 var isUsedElsewhere = await _context.ApartmentImages
-                    .AnyAsync(ai => ai.ImageID == imageId);
+                    .AnyAsync(ai => ai.ImageID == request.ImageId);
 
                 // Если не используется - удаляем из LiteDB
                 if (!isUsedElsewhere)
                 {
-                    await _imageService.DeleteImageAsync(imageId);
+                    await _imageService.DeleteImageAsync(request.ImageId);
                 }
 
                 return Ok();
@@ -457,6 +457,11 @@ namespace REASite.Controllers
                 _logger.LogError(ex, "Ошибка при удалении изображения");
                 return StatusCode(500, "Ошибка при удалении изображения");
             }
+        }
+        public class DeleteImageRequest
+        {
+            public string ImageId { get; set; }
+            public int ApartmentId { get; set; }
         }
         public IActionResult Privacy()
         {

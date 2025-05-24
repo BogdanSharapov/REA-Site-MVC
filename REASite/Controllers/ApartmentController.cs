@@ -18,9 +18,11 @@ namespace REASite.Controllers
         public ActionResult Index(int id)
         {
             var apartment = _context.Apartments
-        .Include(a => a.Address)
-        .Include(a => a.Images)
-        .FirstOrDefault(a => a.Id == id);
+          .Include(a => a.ApartmentComforts)
+          .Include(a => a.Address)
+          .Include(a => a.Images)
+          .FirstOrDefault(a => a.Id == id);
+
             if (apartment == null)
             {
                 return NotFound();

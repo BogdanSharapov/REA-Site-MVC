@@ -114,6 +114,41 @@ public class AccountController : Controller
 
         return Json(new { success = true });
     }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> DeleteBooking([FromBody] BookingRequestModel model)
+    {
+        try
+        {
+            if (model == null || model.BookingId <= 0)
+            {
+                return BadRequest(new { success = false, message = "Неверные данные" });
+            }
+
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null) return Unauthorized(new { success = false, message = "Пользователь не авторизован" });
+
+            var booking = await _context.Bookings
+                .FirstOrDefaultAsync(b => b.Id == model.BookingId && b.UserId == user.Id);
+
+            if (booking == null)
+                return NotFound(new { success = false, message = "Бронирование не найдено" });
+
+            _context.Bookings.Remove(booking);
+            await _context.SaveChangesAsync();
+
+            return Ok(new { success = true, message = "Бронирование удалено" });
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new
+            {
+                success = false,
+                message = "Ошибка сервера: " + ex.Message
+            });
+        }
+    }
     public class BookingRequestModel
     {
         public int BookingId { get; set; }

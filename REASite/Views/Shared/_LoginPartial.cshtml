@@ -5,26 +5,50 @@
 @inject UserManager<SiteUser> UserManager
 
 <ul class="navbar-nav">
-@if (SignInManager.IsSignedIn(User))
-{
+    @if (SignInManager.IsSignedIn(User))
+    {
+
+        @if (User.IsInRole("Admin") || User.IsInRole("Manager"))
+        {
+            <li class="nav-item">
+                <a class="nav-link text-light" asp-controller="Home" asp-action="Create"
+                   title="Добавить новый объект"
+                   data-bs-toggle="tooltip" data-bs-placement="bottom">
+                    <i class="bi bi-plus-lg fs-5"></i>
+                </a>
+            </li>
+        }
+
         <li class="nav-item">
             @if (User.IsInRole("Admin"))
             {
                 <a id="manage" class="nav-link text-light" asp-controller="Admin" asp-action="Users" title="Manage">
-                    Hello @UserManager.GetUserName(User)!
+                    <i class="bi bi-person"></i>
                 </a>
             }
             else
             {
                 <a id="manage" class="nav-link text-light" asp-controller="Account" asp-action="Index" title="Manage">
-                    Hello @UserManager.GetUserName(User)!
+                    <i class="bi bi-person"></i>
                 </a>
             }
         </li>
-    <li class="nav-item">
-        <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-            <button id="logout" type="submit" class="nav-link btn btn-link text-light border-0">Logout</button>
-        </form>
-    </li>
-}
+        <li class="nav-item">
+            <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout"
+                  asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                <button id="logout" type="submit" class="nav-link btn btn-link text-light border-0">
+                    <i class="bi bi-box-arrow-right"></i>
+                </button>
+            </form>
+        </li>
+    }
 </ul>
+<style>
+    .nav-link i {
+        transition: transform 0.2s ease;
+    }
+
+    .nav-link:hover i {
+        transform: scale(1.15);
+    }
+</style>

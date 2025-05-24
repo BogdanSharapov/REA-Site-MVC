@@ -30,7 +30,7 @@
                                         <p class="card-text">Площадь: @apartment.Area м²</p>
                                         <p class="card-text">Комнат: @apartment.RoomsCount</p>
                                         <p class="card-text">Адрес: @apartment.Address.City, @apartment.Address.Street, @apartment.Address.HouseNum</p>
-                                        <a asp-controller="Home" asp-action="Details" asp-route-id="@apartment.Id" class="btn btn-primary">Подробнее</a>
+                                        <a asp-controller="Apartment" asp-action="Index" asp-route-id="@apartment.Id" class="btn btn-primary">Подробнее</a>
                                     </div>
                                 </div>
                             </div>

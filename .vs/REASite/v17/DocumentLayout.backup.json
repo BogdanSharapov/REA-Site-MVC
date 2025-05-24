@@ -3,80 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\areas\\identity\\pages\\_authlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\areas\\identity\\pages\\_authlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\views\\admin\\users.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\views\\admin\\users.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\views\\admin\\manageroles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\views\\admin\\manageroles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\wwwroot\\js\\deleteimage.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\wwwroot\\js\\deleteimage.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\views\\home\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\views\\home\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{31094F05-BB94-4C8C-A9FD-79DCD7CCA27C}|ImageStorage\\ImageStorage.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\imagestorage\\iimageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{31094F05-BB94-4C8C-A9FD-79DCD7CCA27C}|ImageStorage\\ImageStorage.csproj|solutionrelative:imagestorage\\iimageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\wwwroot\\js\\detail.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\wwwroot\\js\\detail.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\views\\shared\\partialcardgridview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\views\\shared\\partialcardgridview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\controllers\\apartmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\controllers\\apartmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\wwwroot\\js\\deletemodal.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\wwwroot\\js\\deletemodal.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\controllers\\favoritescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\controllers\\favoritescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\controllers\\imagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\controllers\\imagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\views\\account\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\views\\account\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\wwwroot\\js\\favorite.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\wwwroot\\js\\favorite.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\views\\apartment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\views\\apartment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\wwwroot\\js\\booking-edit.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\wwwroot\\js\\booking-edit.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\views\\account\\_editbookingmodal.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\views\\account\\_editbookingmodal.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\viewmodel\\bookingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -87,12 +39,92 @@
       "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\views\\booking\\book.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\views\\account\\_editbookingmodal.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\views\\account\\_editbookingmodal.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\wwwroot\\js\\booking-edit.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\wwwroot\\js\\booking-edit.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\viewmodel\\bookingeditviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\viewmodel\\bookingeditviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\models\\apartmentcomfort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\models\\apartmentcomfort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\controllers\\apartmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\controllers\\apartmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\views\\home\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\views\\home\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\views\\home\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\views\\home\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\models\\apartmentimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\models\\apartmentimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\wwwroot\\js\\deleteimage.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\wwwroot\\js\\deleteimage.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\views\\shared\\partialcardgridview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\views\\shared\\partialcardgridview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\views\\shared\\partialsearchpropertyview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\views\\shared\\partialsearchpropertyview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\views\\admin\\users.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\views\\admin\\users.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\views\\admin\\manageroles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\views\\admin\\manageroles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31094F05-BB94-4C8C-A9FD-79DCD7CCA27C}|ImageStorage\\ImageStorage.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\imagestorage\\iimageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31094F05-BB94-4C8C-A9FD-79DCD7CCA27C}|ImageStorage\\ImageStorage.csproj|solutionrelative:imagestorage\\iimageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\wwwroot\\js\\detail.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\wwwroot\\js\\detail.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\wwwroot\\js\\deletemodal.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\wwwroot\\js\\deletemodal.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\controllers\\favoritescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\controllers\\favoritescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\controllers\\imagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\controllers\\imagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|c:\\users\\sarap\\source\\repos\\studyutility\\reasite\\reasite\\wwwroot\\js\\favorite.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{59CBB418-63C3-4696-80E7-CB007D5ADFA1}|REASite\\REASite.csproj|solutionrelative:reasite\\wwwroot\\js\\favorite.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -102,7 +134,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 145,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -119,254 +151,149 @@
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "REASite\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "REASite\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAADoAAAAAAAAAAAAIwFQAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-24T12:30:01.185Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_LoginPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeDocumentMoniker": "REASite\\Views\\Shared\\_LoginPartial.cshtml",
-              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Shared\\_LoginPartial.cshtml*",
-              "RelativeToolTip": "REASite\\Views\\Shared\\_LoginPartial.cshtml*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-24T16:40:53.96Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ManageRoles.cshtml",
-              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Admin\\ManageRoles.cshtml",
-              "RelativeDocumentMoniker": "REASite\\Views\\Admin\\ManageRoles.cshtml",
-              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Admin\\ManageRoles.cshtml",
-              "RelativeToolTip": "REASite\\Views\\Admin\\ManageRoles.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-24T16:40:41.067Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Users.cshtml",
-              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Admin\\Users.cshtml",
-              "RelativeDocumentMoniker": "REASite\\Views\\Admin\\Users.cshtml",
-              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Admin\\Users.cshtml",
-              "RelativeToolTip": "REASite\\Views\\Admin\\Users.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-24T16:40:38.707Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "deleteImage.js",
-              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\deleteImage.js",
-              "RelativeDocumentMoniker": "REASite\\wwwroot\\js\\deleteImage.js",
-              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\deleteImage.js",
-              "RelativeToolTip": "REASite\\wwwroot\\js\\deleteImage.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-05-24T16:36:29.046Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IImageService.cs",
-              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\ImageStorage\\IImageService.cs",
-              "RelativeDocumentMoniker": "ImageStorage\\IImageService.cs",
-              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\ImageStorage\\IImageService.cs",
-              "RelativeToolTip": "ImageStorage\\IImageService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Title": "BookingViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\ViewModel\\BookingViewModel.cs",
+              "RelativeDocumentMoniker": "REASite\\ViewModel\\BookingViewModel.cs",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\ViewModel\\BookingViewModel.cs",
+              "RelativeToolTip": "REASite\\ViewModel\\BookingViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T16:35:17.227Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Home\\Edit.cshtml",
-              "RelativeDocumentMoniker": "REASite\\Views\\Home\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Home\\Edit.cshtml",
-              "RelativeToolTip": "REASite\\Views\\Home\\Edit.cshtml",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAAwG0AAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-24T16:29:23.859Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "REASite\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "REASite\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAKMBAAAAAAAAAAAAwMEBAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T12:26:21.831Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ApartmentController.cs",
-              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Controllers\\ApartmentController.cs",
-              "RelativeDocumentMoniker": "REASite\\Controllers\\ApartmentController.cs",
-              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Controllers\\ApartmentController.cs",
-              "RelativeToolTip": "REASite\\Controllers\\ApartmentController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T15:37:14.077Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "detail.js",
-              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\detail.js",
-              "RelativeDocumentMoniker": "REASite\\wwwroot\\js\\detail.js",
-              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\detail.js",
-              "RelativeToolTip": "REASite\\wwwroot\\js\\detail.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-05-24T16:24:28.487Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "deleteModal.js",
-              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\deleteModal.js",
-              "RelativeDocumentMoniker": "REASite\\wwwroot\\js\\deleteModal.js",
-              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\deleteModal.js",
-              "RelativeToolTip": "REASite\\wwwroot\\js\\deleteModal.js",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAwDIAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-05-24T12:48:51.483Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "partialCardGridView.cshtml",
-              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Shared\\partialCardGridView.cshtml",
-              "RelativeDocumentMoniker": "REASite\\Views\\Shared\\partialCardGridView.cshtml",
-              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Shared\\partialCardGridView.cshtml",
-              "RelativeToolTip": "REASite\\Views\\Shared\\partialCardGridView.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-24T12:27:57.519Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ImageController.cs",
-              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Controllers\\ImageController.cs",
-              "RelativeDocumentMoniker": "REASite\\Controllers\\ImageController.cs",
-              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Controllers\\ImageController.cs",
-              "RelativeToolTip": "REASite\\Controllers\\ImageController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T14:47:31.845Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "FavoritesController.cs",
-              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Controllers\\FavoritesController.cs",
-              "RelativeDocumentMoniker": "REASite\\Controllers\\FavoritesController.cs",
-              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Controllers\\FavoritesController.cs",
-              "RelativeToolTip": "REASite\\Controllers\\FavoritesController.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAswF0AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T11:34:40.798Z",
+              "WhenOpened": "2025-05-24T11:06:28.524Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "BookingController.cs",
-              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Controllers\\BookingController.cs",
-              "RelativeDocumentMoniker": "REASite\\Controllers\\BookingController.cs",
-              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Controllers\\BookingController.cs",
-              "RelativeToolTip": "REASite\\Controllers\\BookingController.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAwwFMAAAAFAAAAAAAAAA==",
+              "Title": "ApartmentImage.cs",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Models\\ApartmentImage.cs",
+              "RelativeDocumentMoniker": "REASite\\Models\\ApartmentImage.cs",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Models\\ApartmentImage.cs",
+              "RelativeToolTip": "REASite\\Models\\ApartmentImage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T10:50:25.468Z",
+              "WhenOpened": "2025-05-24T21:09:06.424Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "REASite\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "REASite\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAADwv24AAABQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T10:50:24.002Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "favorite.js",
-              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\favorite.js",
-              "RelativeDocumentMoniker": "REASite\\wwwroot\\js\\favorite.js",
-              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\favorite.js",
-              "RelativeToolTip": "REASite\\wwwroot\\js\\favorite.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-05-24T11:27:18.14Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Account\\Index.cshtml",
-              "RelativeDocumentMoniker": "REASite\\Views\\Account\\Index.cshtml",
-              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Account\\Index.cshtml",
-              "RelativeToolTip": "REASite\\Views\\Account\\Index.cshtml",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAAGsAAABMAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "REASite\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Shared\\_Layout.cshtml*",
+              "RelativeToolTip": "REASite\\Views\\Shared\\_Layout.cshtml*",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACkAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-24T11:09:37.917Z",
+              "WhenOpened": "2025-05-24T17:53:54.976Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 2,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "REASite\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "REASite\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAHYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-24T22:39:29.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_AuthLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Areas\\Identity\\Pages\\_AuthLayout.cshtml",
+              "RelativeDocumentMoniker": "REASite\\Areas\\Identity\\Pages\\_AuthLayout.cshtml",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Areas\\Identity\\Pages\\_AuthLayout.cshtml*",
+              "RelativeToolTip": "REASite\\Areas\\Identity\\Pages\\_AuthLayout.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-24T23:40:10.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BookingEditViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\ViewModel\\BookingEditViewModel.cs",
+              "RelativeDocumentMoniker": "REASite\\ViewModel\\BookingEditViewModel.cs",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\ViewModel\\BookingEditViewModel.cs",
+              "RelativeToolTip": "REASite\\ViewModel\\BookingEditViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T11:03:20.567Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "booking-edit.js",
               "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\booking-edit.js",
               "RelativeDocumentMoniker": "REASite\\wwwroot\\js\\booking-edit.js",
               "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\booking-edit.js",
               "RelativeToolTip": "REASite\\wwwroot\\js\\booking-edit.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-05-24T11:07:38.578Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 6,
+              "Title": "_EditBookingModal.cshtml",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Account\\_EditBookingModal.cshtml",
+              "RelativeDocumentMoniker": "REASite\\Views\\Account\\_EditBookingModal.cshtml",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Account\\_EditBookingModal.cshtml",
+              "RelativeToolTip": "REASite\\Views\\Account\\_EditBookingModal.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACsAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-24T11:03:30.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "REASite\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "REASite\\Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-24T16:40:53.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Account\\Index.cshtml",
+              "RelativeDocumentMoniker": "REASite\\Views\\Account\\Index.cshtml",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Account\\Index.cshtml",
+              "RelativeToolTip": "REASite\\Views\\Account\\Index.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAACAAAACbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-24T11:09:37.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Apartment\\Index.cshtml",
+              "RelativeDocumentMoniker": "REASite\\Views\\Apartment\\Index.cshtml",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Apartment\\Index.cshtml",
+              "RelativeToolTip": "REASite\\Views\\Apartment\\Index.cshtml",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAAAL4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-24T22:05:39.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Book.cshtml",
               "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Booking\\Book.cshtml",
               "RelativeDocumentMoniker": "REASite\\Views\\Booking\\Book.cshtml",
@@ -379,41 +306,249 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "BookingViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\ViewModel\\BookingViewModel.cs",
-              "RelativeDocumentMoniker": "REASite\\ViewModel\\BookingViewModel.cs",
-              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\ViewModel\\BookingViewModel.cs",
-              "RelativeToolTip": "REASite\\ViewModel\\BookingViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "REASite\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "REASite\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAwHsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T11:06:28.524Z",
+              "WhenOpened": "2025-05-24T10:50:24.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Users.cshtml",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Admin\\Users.cshtml",
+              "RelativeDocumentMoniker": "REASite\\Views\\Admin\\Users.cshtml",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Admin\\Users.cshtml",
+              "RelativeToolTip": "REASite\\Views\\Admin\\Users.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-24T16:40:38.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ApartmentController.cs",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Controllers\\ApartmentController.cs",
+              "RelativeDocumentMoniker": "REASite\\Controllers\\ApartmentController.cs",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Controllers\\ApartmentController.cs",
+              "RelativeToolTip": "REASite\\Controllers\\ApartmentController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T15:37:14.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "deleteImage.js",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\deleteImage.js",
+              "RelativeDocumentMoniker": "REASite\\wwwroot\\js\\deleteImage.js",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\deleteImage.js",
+              "RelativeToolTip": "REASite\\wwwroot\\js\\deleteImage.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-05-24T16:36:29.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ApartmentComfort.cs",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Models\\ApartmentComfort.cs",
+              "RelativeDocumentMoniker": "REASite\\Models\\ApartmentComfort.cs",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Models\\ApartmentComfort.cs",
+              "RelativeToolTip": "REASite\\Models\\ApartmentComfort.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T22:25:59.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BookingController.cs",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Controllers\\BookingController.cs",
+              "RelativeDocumentMoniker": "REASite\\Controllers\\BookingController.cs",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Controllers\\BookingController.cs",
+              "RelativeToolTip": "REASite\\Controllers\\BookingController.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAwwFMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T10:50:25.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "partialCardGridView.cshtml",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Shared\\partialCardGridView.cshtml",
+              "RelativeDocumentMoniker": "REASite\\Views\\Shared\\partialCardGridView.cshtml",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Shared\\partialCardGridView.cshtml",
+              "RelativeToolTip": "REASite\\Views\\Shared\\partialCardGridView.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACMAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-24T12:27:57.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "REASite\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "REASite\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAJUBAAAAAAAAAAAjwLsBAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T12:26:21.831Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Home\\Edit.cshtml",
+              "RelativeDocumentMoniker": "REASite\\Views\\Home\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Home\\Edit.cshtml",
+              "RelativeToolTip": "REASite\\Views\\Home\\Edit.cshtml",
+              "ViewState": "AgIAAMkAAAAAAAAAAAAAAO8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-24T16:29:23.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Home\\Create.cshtml",
+              "RelativeDocumentMoniker": "REASite\\Views\\Home\\Create.cshtml",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Home\\Create.cshtml",
+              "RelativeToolTip": "REASite\\Views\\Home\\Create.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAkwNsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-24T20:23:45.494Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
-              "Title": "_EditBookingModal.cshtml",
-              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Account\\_EditBookingModal.cshtml",
-              "RelativeDocumentMoniker": "REASite\\Views\\Account\\_EditBookingModal.cshtml",
-              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Account\\_EditBookingModal.cshtml",
-              "RelativeToolTip": "REASite\\Views\\Account\\_EditBookingModal.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA8AAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "REASite\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "REASite\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-24T11:03:30.683Z",
+              "WhenOpened": "2025-05-24T19:09:48.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ManageRoles.cshtml",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Admin\\ManageRoles.cshtml",
+              "RelativeDocumentMoniker": "REASite\\Views\\Admin\\ManageRoles.cshtml",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Admin\\ManageRoles.cshtml",
+              "RelativeToolTip": "REASite\\Views\\Admin\\ManageRoles.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-24T16:40:41.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IImageService.cs",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\ImageStorage\\IImageService.cs",
+              "RelativeDocumentMoniker": "ImageStorage\\IImageService.cs",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\ImageStorage\\IImageService.cs",
+              "RelativeToolTip": "ImageStorage\\IImageService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T16:35:17.227Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 22,
-              "Title": "BookingEditViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\ViewModel\\BookingEditViewModel.cs",
-              "RelativeDocumentMoniker": "REASite\\ViewModel\\BookingEditViewModel.cs",
-              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\ViewModel\\BookingEditViewModel.cs",
-              "RelativeToolTip": "REASite\\ViewModel\\BookingEditViewModel.cs",
+              "Title": "partialSearchPropertyView.cshtml",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Shared\\partialSearchPropertyView.cshtml",
+              "RelativeDocumentMoniker": "REASite\\Views\\Shared\\partialSearchPropertyView.cshtml",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Views\\Shared\\partialSearchPropertyView.cshtml",
+              "RelativeToolTip": "REASite\\Views\\Shared\\partialSearchPropertyView.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-24T18:08:57.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "detail.js",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\detail.js",
+              "RelativeDocumentMoniker": "REASite\\wwwroot\\js\\detail.js",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\detail.js",
+              "RelativeToolTip": "REASite\\wwwroot\\js\\detail.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-05-24T16:24:28.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "deleteModal.js",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\deleteModal.js",
+              "RelativeDocumentMoniker": "REASite\\wwwroot\\js\\deleteModal.js",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\deleteModal.js",
+              "RelativeToolTip": "REASite\\wwwroot\\js\\deleteModal.js",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAwDIAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-05-24T12:48:51.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ImageController.cs",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Controllers\\ImageController.cs",
+              "RelativeDocumentMoniker": "REASite\\Controllers\\ImageController.cs",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Controllers\\ImageController.cs",
+              "RelativeToolTip": "REASite\\Controllers\\ImageController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T11:03:20.567Z",
+              "WhenOpened": "2025-05-24T14:47:31.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "FavoritesController.cs",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Controllers\\FavoritesController.cs",
+              "RelativeDocumentMoniker": "REASite\\Controllers\\FavoritesController.cs",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\Controllers\\FavoritesController.cs",
+              "RelativeToolTip": "REASite\\Controllers\\FavoritesController.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAswF0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T11:34:40.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "favorite.js",
+              "DocumentMoniker": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\favorite.js",
+              "RelativeDocumentMoniker": "REASite\\wwwroot\\js\\favorite.js",
+              "ToolTip": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\favorite.js",
+              "RelativeToolTip": "REASite\\wwwroot\\js\\favorite.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-05-24T11:27:18.14Z",
               "EditorCaption": ""
             }
           ]

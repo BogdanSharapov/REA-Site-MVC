@@ -1,82 +1,192 @@
 ﻿@model REASite.Models.Apartment
 @{
-    ViewData["Title"] = "ApartmentFullPage";
+    ViewData["Title"] = Model.Title;
 }
-@{
-  <div class="container my-4">
-    <!-- Блок фотографий -->
-    <section id="photo-gallery">
-            <div id="propertyCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    @for (int i = 0; i < Model.Images.Count; i++)
+
+<div class="container my-4">
+ 
+    <section id="photo-gallery" class="mb-5">
+        <div id="propertyCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                @for (int i = 0; i < Model.Images.Count; i++)
+                {
+                    <button type="button" data-bs-target="#propertyCarousel" data-bs-slide-to="@i" class="@(i == 0 ? "active" : "")" aria-current="@(i == 0 ? "true" : "false")" aria-label="Slide @i"></button>
+                }
+            </div>
+            <div class="carousel-inner rounded-3">
+                @if (Model.Images != null && Model.Images.Any())
+                {
+                    @foreach (var image in Model.Images)
                     {
-                        <button type="button" data-bs-target="#propertyCarousel" data-bs-slide-to="@i" class="@(i == 0 ? "active" : "")" aria-current="@(i == 0 ? "true" : "false")" aria-label="Slide @i"></button>
+                        <div class="carousel-item @(image == Model.Images.First() ? "active" : "")">
+                            <img src="@Url.Action("Get", "Image", new { imageId = image.ImageID })"
+                                 class="d-block w-100"
+                                 alt="@Model.Title"
+                                 style="height: 600px; object-fit: cover;" />
+                        </div>
                     }
+                }
+                else
+                {
+                    <div class="carousel-item active">
+                        <img src="@Url.Content("~/images/placeholder.jpg")"
+                             class="d-block w-100"
+                             alt="Нет фото"
+                             style="height: 600px; object-fit: cover;">
+                    </div>
+                }
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#propertyCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Предыдущий</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#propertyCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Следующий</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Основная информация -->
+    <div class="row g-4">
+        <!-- Левая колонка -->
+        <div class="col-lg-8">
+            <!-- Описание -->
+            <section class="card border-dark mb-4">
+                <div class="card-header bg-dark text-light">
+                    <h3 class="mb-0"><i class="bi bi-file-text"></i> Описание</h3>
                 </div>
-                <div class="carousel-inner">
-                    @if (Model.Images != null && Model.Images.Any())
-                    {
-                        @foreach (var image in Model.Images)
-                        {
-                            <div class="carousel-item @(image == Model.Images.First() ? "active" : "")">
-                                <img src="@Url.Action("Get", "Image", new { imageId = image.ImageID })"
-                                     class="d-block w-100"
-                                     alt="@Model.Title"
-                                     loading="lazy" />
+                <div class="card-body bg-light">
+                    <p class="lead">@Model.Description</p>
+                </div>
+            </section>
+
+            <!-- Характеристики -->
+            <section class="card border-dark mb-4">
+                <div class="card-header bg-dark text-light">
+                    <h3 class="mb-0"><i class="bi bi-list-task"></i> Характеристики</h3>
+                </div>
+                <div class="card-body bg-light">
+                    <div class="row row-cols-1 row-cols-md-2 g-3">
+                        <div class="col">
+                            <div class="border-dark rounded p-3">
+                                <h5 class="text-muted"><i class="bi bi-rulers"></i> Площадь</h5>
+                                <p class="h4">@Model.Area м²</p>
                             </div>
-                        }
+                        </div>
+                        <div class="col">
+                            <div class="border-dark rounded p-3">
+                                <h5 class="text-muted"><i class="bi bi-building"></i> Этаж</h5>
+                                <p class="h4">@Model.Floor</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="border-dark rounded p-3">
+                                <h5 class="text-muted"><i class="bi bi-door-open"></i> Комнаты</h5>
+                                <p class="h4">@Model.RoomsCount</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="border-dark rounded p-3">
+                                <h5 class="text-muted"><i class="bi bi-cash"></i> Стоимость</h5>
+                                <p class="h4">@Model.Price.ToString("N0") ₽</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Правая колонка -->
+        <div class="col-lg-4">
+            <!-- Блок удобств -->
+            <section class="card border-dark mb-4">
+                <div class="card-header bg-dark text-light">
+                    <h3 class="mb-0"><i class="bi bi-stars"></i> Удобства</h3>
+                </div>
+                <div class="card-body bg-secondary">
+                    @if (Model.ApartmentComforts?.Any() == true)
+                    {
+                        <div class="d-flex flex-wrap gap-2">
+                            @foreach (var apartmentComfort in Model.ApartmentComforts)
+                            {
+                                <div class="comfort-badge px-3 py-2 rounded-pill border border-2 border-light">
+                                    <i class="bi bi-check2-circle me-2"></i>
+                                    @apartmentComfort.Comfort.GetDisplayName()
+                                </div>
+                            }
+                        </div>
                     }
                     else
                     {
-                        <div class="carousel-item active">
-                            <img src="@Url.Content("~/images/placeholder.jpg")"
-                                 class="d-block w-100"
-                                 alt="Нет фото">
-                        </div>
+                        <p class="text-muted mb-0">Удобства не указаны</p>
                     }
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#propertyCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Предыдущий</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#propertyCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Следующий</span>
-                </button>
-            </div>
-    </section>
-    <!-- Описание и характеристики объекта -->
-    <section id="property-details" class="mb-4">
-      <h2>Описание недвижимости</h2>
-      <p>
-        @Model.Description
-      </p>
+            </section>
 
-      <h4>Характеристики</h4>
-      <table class="table table-bordered">
-        <tbody>
-          <tr>
-            <th scope="row">Площадь</th>
-            <td>@Model.Area м²</td>
-          </tr>
-          <tr>
-            <th scope="row">Этаж</th>
-            <td>@Model.Floor</td>
-          </tr>
-          <tr>
-            <th scope="row">Количество комнат</th>
-            <td>@Model.RoomsCount</td>
-          </tr>
-          <tr>
-            <th scope="row">Стоимость</th>
-            <td>@Model.Price &#8381;</td>
-          </tr>
-          <tr>
-            <th scope="row">Год постройки</th>
-            <td>2010</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-  </div>
-}
+            <!-- Дополнительная информация -->
+            <div class="card border-dark">
+                <div class="card-header bg-dark text-light">
+                    <h3 class="mb-0"><i class="bi bi-info-circle"></i> Детали</h3>
+                </div>
+                <div class="card-body bg-light">
+                    <dl class="row">
+                        <dt class="col-sm-5">Тип предложения</dt>
+                        <dd class="col-sm-7">@Model.OfferType.GetDisplayName()</dd>
+
+                        <dt class="col-sm-5">Адрес</dt>
+                        <dd class="col-sm-7">
+                            @Model.Address.Country, @Model.Address.City<br>
+                            @Model.Address.Street, @Model.Address.HouseNum
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Базовые стили для элементов удобств */
+    .comfort-badge {
+        background-color: #f0f7ff; /* Нежно-голубой */
+        border: 2px solid #d1e4ff !important;
+        color: #2c3e50 !important;
+        padding: 8px 15px;
+        border-radius: 12px;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        margin: 4px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+        /* Цветовые варианты */
+        .comfort-badge[data-comfort="WiFi"] {
+            background: #ffeff3; /* Нежно-розовый */
+            border-color: #ffd6e0;
+        }
+
+        .comfort-badge[data-comfort="AirConditioner"] {
+            background: #e3f8f2; /* Мятный */
+            border-color: #c2ece0;
+        }
+
+        .comfort-badge[data-comfort="Balcony"] {
+            background: #f5f0ff; /* Лавандовый */
+            border-color: #e4daf9;
+        }
+
+        /* Общие эффекты */
+        .comfort-badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        }
+
+        .comfort-badge i {
+            color: #8a7f99; /* Приглушенный фиолетовый */
+            margin-right: 8px;
+            font-size: 1.1rem;
+        }
+
+
+</style>

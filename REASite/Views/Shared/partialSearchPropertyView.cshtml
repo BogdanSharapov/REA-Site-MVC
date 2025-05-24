@@ -1,33 +1,76 @@
 ﻿@using System.Reflection
 @using System.ComponentModel.DataAnnotations
-<form method="get" asp-controller="Home" asp-action="Index">
-    <div class="form-row">
-        <div class="col">
-            <input type="text" class="form-control" name="search" placeholder="Поиск по названию или описанию">
+
+<form method="get" asp-controller="Home" asp-action="Index" class="mb-4">
+    <div class="d-flex align-items-center gap-2">
+        <!-- Кнопка фильтров с иконкой-переключателем -->
+        <button type="button" 
+        class="btn btn-outline-primary" 
+        id="toggleFiltersBtn"
+        data-bs-toggle="collapse" 
+        data-bs-target="#filtersCollapse"
+        aria-expanded="false" 
+        aria-controls="filtersCollapse">
+    <i class="bi bi-filter-square-fill"></i>
+</button>
+
+        <!-- Поле поиска -->
+        <div class="flex-grow-1">
+            <div class="input-group">
+                <input type="text"
+                       class="form-control rounded-pill"
+                       name="search"
+                       placeholder="Поиск...">
+                <button type="submit" class="btn btn-primary rounded-pill ms-2">
+                    <i class="bi bi-search"></i>
+                </button>
+            </div>
         </div>
-        <div class="col">
-            <input type="text" class="form-control" name="city" placeholder="Город">
-        </div>
-        <div class="col">
-            <input type="number" class="form-control" name="minPrice" placeholder="Мин. цена">
-        </div>
-        <div class="col">
-            <input type="number" class="form-control" name="maxPrice" placeholder="Макс. цена">
-        </div>
-        <div class="col">
-            <select class="form-control" name="offerType">
-                <option value="">Все</option>
-                @foreach (var type in Enum.GetValues(typeof(OfferTypeEnum)).Cast<OfferTypeEnum>())
-                {
-                    var displayName = type.GetType()
-                    .GetMember(type.ToString())[0]
-                    .GetCustomAttribute<DisplayAttribute>()?.Name ?? type.ToString();
-                    <option value="@type.ToString()">@displayName</option>
-                }
-            </select>
-        </div> 
-        <div class="col">
-            <button type="submit" class="btn btn-primary">Поиск</button>
+    </div>
+
+    <!-- Секция фильтров -->
+    <div class="collapse mt-3" id="filtersCollapse">
+        <div class="row g-3">
+            <div class="col-md-4">
+                <input type="text"
+                       class="form-control"
+                       name="city"
+                       placeholder="Город">
+            </div>
+            <div class="col-md-4">
+                <input type="number"
+                       class="form-control"
+                       name="minPrice"
+                       placeholder="Мин. цена">
+            </div>
+            <div class="col-md-4">
+                <input type="number"
+                       class="form-control"
+                       name="maxPrice"
+                       placeholder="Макс. цена">
+            </div>
         </div>
     </div>
 </form>
+
+@section Scripts {
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const filtersCollapse = new bootstrap.Collapse('#filtersCollapse', {
+        toggle: false
+    });
+
+    // Обработчик клика по кнопке
+    document.getElementById('toggleFiltersBtn').addEventListener('click', function() {
+        filtersCollapse.toggle();
+
+        // Анимация иконки
+        this.querySelector('i').style.transform =
+            this.getAttribute('aria-expanded') === 'true'
+                ? 'rotate(180deg)'
+                : 'rotate(0deg)';
+    });
+});
+    </script>
+}
