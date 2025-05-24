@@ -1,78 +1,72 @@
-﻿@model Apartment
-
-<div class="card position-relative h-100" data-delete-url="@Url.Action("Delete", "Home", new { id = Model.Id })">
-
-    <div id="carousel_@Model.Id" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            @if (Model.Images != null && Model.Images.Any())
-            {
-                @for (int i = 0; i < Model.Images.Count; i++)
-                {
-                    <div class="carousel-item @(i == 0 ? "active" : "")">
-                        <img src="@Url.Action("Get", "Image", new { imageId = Model.Images[i].ImageID })" class="d-block w-100" alt="@Model.Title" loading="lazy" />
-                    </div>
-                }
-            }
-            else
-            {
-                <div class="carousel-item active">
-                    <img src="/images/placeholder.jpg" class="d-block w-100" alt="Нет фото" />
-                </div>
-            }
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carousel_@Model.Id" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carousel_@Model.Id" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-    <div class="card-body">
-        <h5 class="card-title">@Model.Title</h5>
-        <p class="card-text">@Model.Description</p>
-        <p class="card-text">Площадь: @Model.Area м²</p>
-        <p class="card-text">Комнат: @Model.RoomsCount</p>
-        <p class="card-text">Тип предложения: @Model.OfferType</p>
-        <p class="card-text">Адрес: @Model.Address.Country, @Model.Address.City, @Model.Address.Street, @Model.Address.HouseNum</p>
-        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-outline-warning">Edit</a>
-        <button class="btn btn-outline-danger delete-button" data-id="@Model.Id" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>
-        @if (User.Identity.IsAuthenticated)
-        {
-            <div class="position-absolute bottom-0 start-0 p-2">
-                @if (ViewBag.IsFavorite ?? false)
-                {
-                    <form asp-controller="Home" asp-action="RemoveFromFavorites" method="post" style="display:inline;">
-                        <input type="hidden" name="ModelId" value="@Model.Id" />
-                        <button type="submit" class="btn btn-link text-danger p-0" style="font-size: 1.5rem;">
-                            <i class="bi bi-heart-fill"></i>
-                        </button>
-                    </form>
-                }
-                else
-                {
-                    <form asp-controller="Home" asp-action="AddToFavorites" method="post" style="display:inline;">
-                        <input type="hidden" name="ModelId" value="@Model.Id" />
-                        <button type="submit" class="btn btn-link text-secondary p-0" style="font-size: 1.5rem;">
-                            <i class="bi bi-heart"></i>
-                        </button>
-                    </form>
-                }
-            </div>
-        }
-        @if (Model.OfferType == OfferTypeEnum.DailyRent)
-        {
-            <div class="card-footer">
-                <a asp-controller="Booking" asp-action="Book" asp-route-ModelId="@Model.Id" class="btn btn-primary">Book</a>
-            </div>
-        }
-    </div>
-</div>
-
-
-
-
-    @section Scripts {
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+﻿@model List<REASite.Models.Apartment>
+    @{
+        List<int> favoriteIds = ViewData["FavoriteIds"] as List<int> ?? new List<int>();
     }
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        @foreach (var apartment in Model)
+        {
+            var isFavorite = favoriteIds.Contains(apartment.Id);
+
+            <div class="col-md-4 mb-4">
+            <div class="card position-relative h-100" data-detail-url="@Url.Action("Index", "Apartment", new { id = apartment.Id })"
+                 data-delete-url="@Url.Action("Index", "Apartment", new { id = apartment.Id })">
+                    <div id="carousel_@apartment.Id" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            @if (apartment.Images != null && apartment.Images.Count > 0)
+                            {
+                                @for (int i = 0; i < apartment.Images.Count; i++)
+                                {
+                                    <div class="carousel-item @(i == 0 ? "active" : "")">
+                                        <img src="@Url.Action("Get", "Image", new { imageId = apartment.Images[i].ImageID })" class="d-block w-100" alt="@apartment.Title" loading="lazy" />
+                                    </div>
+                                }
+                            }
+                            else
+                            {
+                                <div class="carousel-item active">
+                                    <img src="/images/placeholder.jpg" class="d-block w-100" alt="Нет фото" />
+                                </div>
+                            }
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel_@apartment.Id" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel_@apartment.Id" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    @Html.AntiForgeryToken()
+                    <div class="card-body">
+                        <h5 class="card-title">@apartment.Title</h5>
+                        <p class="card-text">@apartment.Description</p>
+                        <p class="card-text">Площадь: @apartment.Area м²</p>
+                        <p class="card-text">Комнат: @apartment.RoomsCount</p>
+                        <p class="card-text">Тип предложения: @apartment.OfferType</p>
+                        <p class="card-text">Адрес: @apartment.Address.Country, @apartment.Address.City, @apartment.Address.Street, @apartment.Address.HouseNum</p>
+                        <a asp-action="Edit" asp-route-id="@apartment.Id" class="btn btn-outline-warning">Edit</a>
+                    <button class="btn btn-outline-danger delete-button" data-id="@apartment.Id" data-bs-toggle="modal" data-bs-target="#deleteModal" data-apartment-id="@apartment.Id">Delete</button>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <div class="position-absolute bottom-0 start-0 p-2">
+                                <button class="btn btn-link p-0 favorite-button @(isFavorite ? "active" : "")"
+                                        data-apartment-id="@apartment.Id"
+                                        onclick="toggleFavorite(this, @apartment.Id, @isFavorite.ToString().ToLower())"
+                                        style="font-size: 1.5rem;">
+                                    <i class="bi @(isFavorite ? "bi-heart-fill" : "bi-heart")"></i>
+                                </button>
+                            </div>
+                        }
+
+                        @if (apartment.OfferType == OfferTypeEnum.DailyRent)
+                        {
+                            <div class="card-footer">
+                                <a asp-controller="Booking" asp-action="Book" asp-route-apartmentId="@apartment.Id" class="btn btn-primary">Book</a>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>

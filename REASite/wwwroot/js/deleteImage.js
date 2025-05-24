@@ -1,21 +1,31 @@
-﻿$(document).ready(function () {
-    $('.delete-image-btn').click(function () {
-        var imageId = $(this).data('image-id');
-        var apartmentId = $(this).data('apartment-id');
-        var deleteUrl = $('#deleteImageUrl').val();
-        $.ajax({
-            url: deleteUrl,
-            type: 'POST',
-            data: { imageId: imageId, apartmentId: apartmentId },
-            headers: {
-                'RequestVerificationToken': $('input[name="__RequestVerificationToken"]').val()
-            },
-            success: function () {
-                $(`[data-image-id="${imageId}"]`).closest('.image-container').remove();
-            },
-            error: function () {
-                alert('Ошибка при удалении изображения.');
-            }
+﻿document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.delete-image-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+            const imageId = this.dataset.imageId;
+            const apartmentId = this.dataset.apartmentId;
+            const imageContainer = this.closest('.image-container');
+
+            if (!confirm('Вы уверены, что хотите удалить это изображение?')) return;
+
+            fetch('/Home/DeleteImage', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]').value
+                },
+                body: JSON.stringify({
+                    imageId: imageId,
+                    apartmentId: apartmentId
+                })
+            })
+                .then(response => {
+                    if (!response.ok) throw new Error('Ошибка удаления');
+                    imageContainer.remove();
+                })
+                .catch(error => {
+                    console.error(error);
+                    alert(error.message);
+                });
         });
     });
 });

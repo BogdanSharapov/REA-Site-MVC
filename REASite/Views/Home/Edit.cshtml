@@ -94,10 +94,18 @@
                     <div class="row">
                         @foreach (var image in Model.Images)
                         {
-                            @* <div class="col-md-3 image-container">
-                                <img src="@image.ImageURL" alt="Apartment Image" style="max-width: 100px;" class="image-preview"/>
-                                <button type="button" class="btn btn-danger mt-2 delete-image-btn" data-image-id="@image.Id" data-apartment-id="@Model.Id">Delete</button>
-                            </div> *@
+                            <div class="col-md-3 image-container mb-3">
+                                <img src="@Url.Action("Get", "Image", new { imageId = image.ImageID })"
+                                     alt="Apartment Image"
+                                     style="max-width: 100px;"
+                                     class="img-thumbnail" />
+                                <button type="button"
+                                        class="btn btn-danger btn-sm mt-2 delete-image-btn"
+                                        data-image-id="@image.ImageID"
+                                        data-apartment-id="@Model.Id">
+                                    Delete
+                                </button>
+                            </div>
                         }
                     </div>
                 }

@@ -7,8 +7,6 @@ namespace REASite.Models
 {
     public class Apartment
     {
-        //TODO: commentary, rating. 
-
         [Key]
         [Column("apartment_id")]
         public int Id { get; set; }

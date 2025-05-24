@@ -1,44 +1,51 @@
 ﻿document.addEventListener('DOMContentLoaded', function () {
-    const deleteModal = document.getElementById('deleteModal');
+    function getAntiForgeryToken() {
+        const tokenInput = document.querySelector('input[name="__RequestVerificationToken"]');
+        return tokenInput ? tokenInput.value : "";
+    }
+
+    let currentApartmentId = null;
+
+    const deleteModalEl = document.getElementById('deleteModal');
     const confirmDeleteBtn = document.getElementById('confirmDelete');
 
-    document.querySelectorAll('.card').forEach(card => {
-        card.addEventListener('click', function (event) {
-            if (event.target.closest('.carousel') || event.target.closest('.btn')) {
-                return;
-            }
-            const url = this.getAttribute('data-detail-url');
-            if (url) {
-                window.location.href = url;
-            }
-        });
-
-        card.addEventListener('contextmenu', function (event) {
-            event.preventDefault();
-            const deleteUrl = this.getAttribute('data-delete-url');
-            if (deleteUrl) {
-                deleteModal.setAttribute('data-delete-url', deleteUrl);
-                new bootstrap.Modal(deleteModal).show();
-            }
-        });
-    });
-
-    confirmDeleteBtn.addEventListener('click', async function () {
-        const deleteUrl = deleteModal.getAttribute('data-delete-url');
-        if (deleteUrl) {
-            const response = await fetch(deleteUrl, {
-                method: 'POST',
-                headers: {
-                    'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]').value
-                }
-            });
-            if (response.ok) {
-                const card = document.querySelector(`[data-delete-url="${deleteUrl}"]`);
-                if (card) card.remove();
-            } else {
-                alert('Ошибка при удалении.');
-            }
-            bootstrap.Modal.getInstance(deleteModal).hide();
+    deleteModalEl.addEventListener('show.bs.modal', function (event) {
+        const button = event.relatedTarget;
+        if (button) {
+            currentApartmentId = button.getAttribute('data-apartment-id');
         }
     });
-})
+
+    confirmDeleteBtn.addEventListener('click', function () {
+        if (!currentApartmentId) return;
+
+        const token = getAntiForgeryToken();
+
+        fetch(deleteUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'RequestVerificationToken': token
+            },
+            body: JSON.stringify({ ApartmentId: parseInt(currentApartmentId) })
+        })
+            .then(response => {
+                if (!response.ok) throw new Error("Ошибка сети");
+                return response.json();
+            })
+            .then(data => {
+                if (data.success) {
+                    // Перезагрузка страницы при успешном удалении
+                    window.location.reload();
+                }
+            })
+            .catch(error => {
+                console.error("Ошибка:", error);
+                alert("Не удалось удалить объект");
+            })
+            .finally(() => {
+                const modal = bootstrap.Modal.getInstance(deleteModalEl);
+                if (modal) modal.hide();
+            });
+    });
+});

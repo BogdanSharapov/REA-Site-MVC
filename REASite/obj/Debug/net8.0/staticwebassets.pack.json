@@ -297,12 +297,24 @@
       "PackagePath": "staticwebassets\\images\\ffedc3ac-0dc2-45ce-89a0-4f6d8e6958fc.jpg"
     },
     {
+      "Id": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\booking-edit.js",
+      "PackagePath": "staticwebassets\\js\\booking-edit.js"
+    },
+    {
       "Id": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\deleteImage.js",
       "PackagePath": "staticwebassets\\js\\deleteImage.js"
     },
     {
       "Id": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\deleteModal.js",
       "PackagePath": "staticwebassets\\js\\deleteModal.js"
+    },
+    {
+      "Id": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\detail.js",
+      "PackagePath": "staticwebassets\\js\\detail.js"
+    },
+    {
+      "Id": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\favorite.js",
+      "PackagePath": "staticwebassets\\js\\favorite.js"
     },
     {
       "Id": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\site.js",

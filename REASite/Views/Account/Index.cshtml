@@ -1,0 +1,114 @@
+﻿@model REASite.ViewModel.AccountViewModel
+@using REASite.Models
+@using Microsoft.AspNetCore.Identity
+
+<div class="container mt-4">
+    <div class="card login-logout-card">
+        <div class="card-header">
+            <h3>Мой аккаунт</h3>
+        </div>
+        <ul class="nav nav-tabs" id="accountTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="favorites-tab" data-bs-toggle="tab" data-bs-target="#favorites" type="button" role="tab" aria-controls="favorites" aria-selected="true">Избранное</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="bookings-tab" data-bs-toggle="tab" data-bs-target="#bookings" type="button" role="tab" aria-controls="bookings" aria-selected="false">Бронирования</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="accountTabsContent">
+            <div class="tab-pane fade show active" id="favorites" role="tabpanel" aria-labelledby="favorites-tab">
+                @if (Model.Favorites.Any())
+                {
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                        @foreach (var apartment in Model.Favorites)
+                        {
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">@apartment.Title</h5>
+                                        <p class="card-text">@apartment.Description</p>
+                                        <p class="card-text">Площадь: @apartment.Area м²</p>
+                                        <p class="card-text">Комнат: @apartment.RoomsCount</p>
+                                        <p class="card-text">Адрес: @apartment.Address.City, @apartment.Address.Street, @apartment.Address.HouseNum</p>
+                                        <a asp-controller="Home" asp-action="Details" asp-route-id="@apartment.Id" class="btn btn-primary">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <p>Нет избранных объектов.</p>
+                }
+            </div>
+            <div class="tab-pane fade" id="bookings" role="tabpanel" aria-labelledby="bookings-tab">
+                @if (Model.Bookings.Count > 0)
+                {
+                    <ul class="list-group">
+                        @foreach (var booking in Model.Bookings)
+                        {
+                            <li class="list-group-item">
+                                <strong>@booking.Apartment.Title</strong> - С @booking.StartDate.ToString("yyyy-MM-dd") по @booking.EndDate.ToString("yyyy-MM-dd")
+                                <button type="button" class="btn btn-sm btn-primary edit-booking-btn" data-booking-id="@booking.Id">Редактировать</button>
+                            </li>
+                        }
+                    </ul>
+                }
+                else
+                {
+                    <p>Нет бронирований.</p>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="editBookingModal" tabindex="-1" aria-labelledby="editBookingModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Содержимое будет загружено через AJAX -->
+        </div>
+    </div>
+</div>
+</div>
+
+<style>
+    .login-logout-card .card-header {
+        padding: 0px 0px 12px 0px;
+    }
+
+    .login-logout-card ul.nav-tabs {
+        margin: 0px 0px -12px 6px;
+    }
+
+    .login-logout-card li.nav-item {
+        width: 50%;
+    }
+
+    .login-logout-card a.nav-link {
+        font-size: 1rem;
+        color: #495057;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .login-logout-card .card-body {
+        padding: 10px 20px;
+    }
+</style>
+@section Scripts {
+    <!-- Подключение jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Подключение Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Определение глобальных переменных для URL -->
+    <script>
+        var getEditBookingModalUrl = '@Url.Action("GetBooking", "Account")';
+        var indexAccountUrl = '@Url.Action("Index", "Account")';
+    </script>
+
+    <!-- Подключение внешнего файла с вашим скриптом -->
+    <script src="~/js/booking-edit.js"></script>
+}

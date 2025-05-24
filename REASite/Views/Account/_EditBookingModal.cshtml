@@ -1,0 +1,25 @@
+﻿@model REASite.ViewModel.BookingEditViewModel
+
+<div class="modal-header">
+    <h5 class="modal-title">Редактировать бронирование</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+    <form id="editBookingForm" method="post" asp-action="EditBooking" asp-controller="Account">
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="BookingId" value="@Model.Id" />
+        <div class="mb-3">
+            <label for="StartDate" class="form-label">Дата начала</label>
+            <input type="date" class="form-control" id="StartDate" name="StartDate" value="@Model.StartDate.ToString("yyyy-MM-dd")" />
+        </div>
+        <div class="mb-3">
+            <label for="EndDate" class="form-label">Дата окончания</label>
+            <input type="date" class="form-control" id="EndDate" name="EndDate" value="@Model.EndDate.ToString("yyyy-MM-dd")" />
+        </div>
+        <div id="errorContainer" class="alert alert-danger" style="display: none;"></div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+    <button type="submit" form="editBookingForm" class="btn btn-primary">Сохранить</button>
+</div>

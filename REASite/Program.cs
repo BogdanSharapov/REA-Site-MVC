@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using REASite.Areas.Identity.Data;
 using ImageStorage;
 using LiteDB;
+using Microsoft.AspNetCore.Diagnostics;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,7 +17,10 @@ builder.Services.AddTransient<IImageService, LiteDbImageService>(); builder.Serv
     options.Password.RequireUppercase = false;
 });
 builder.Services.AddDbContext<REASiteDbContext>(options =>
-options.UseNpgsql(builder.Configuration.GetConnectionString("REASiteDB")));
+options.UseNpgsql(builder.Configuration.GetConnectionString("REASiteDB"))
+.LogTo(Console.WriteLine, LogLevel.Information) // Логи в консоль
+.EnableSensitiveDataLogging() // Показывать параметры запросов
+);
 
 builder.Services.AddDefaultIdentity<SiteUser>(options => options.SignIn.RequireConfirmedAccount = false)
     .AddRoles<IdentityRole>()
@@ -50,6 +54,7 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+
 DbInitializer.Initialize(app.Services);
 
 app.MapControllerRoute(
@@ -60,6 +65,12 @@ app.MapControllerRoute(
 );
 
 app.MapControllerRoute(
+    name: "account",
+    pattern: "Account",
+    defaults: new { controller = "Account", action = "Index" });
+
+
+app.MapControllerRoute(
     name: "admin",
     pattern: "Admin/{action=Users}/{id?}",
     defaults: new { controller = "Admin" });
@@ -67,6 +78,7 @@ app.MapControllerRoute(
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
 app.MapRazorPages();
 
 using (var scope = app.Services.CreateScope())

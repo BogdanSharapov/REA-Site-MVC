@@ -47,6 +47,10 @@ namespace REASite.Data
                 .HasIndex(a => new { a.Country, a.City, a.Street, a.HouseNum })
                 .IsUnique();
 
+            modelBuilder.Entity<Favorites>()
+                .HasIndex(f => new { f.UserId, f.ApartmentId })
+                .IsUnique();
+
             modelBuilder.Entity<Booking>()
                .HasOne(b => b.Apartment)
                .WithMany(a => a.Bookings)

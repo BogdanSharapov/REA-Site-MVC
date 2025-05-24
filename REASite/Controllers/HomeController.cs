@@ -19,11 +19,13 @@ namespace REASite.Controllers
         private readonly IImageService _imageService;
         private readonly UserManager<SiteUser> _userManager;
 
-        public HomeController(REASiteDbContext context, ILogger<HomeController> logger, IImageService imageService)
+        public HomeController(REASiteDbContext context, ILogger<HomeController> logger, IImageService imageService, UserManager<SiteUser> userManager)
         {
             _context = context;
             _logger = logger;
             _imageService = imageService;
+            _userManager = userManager;
+
         }
         public async Task<IActionResult> Index(string search, string city, int? minPrice, int? maxPrice,  string offerType, string type = "Rent")
         {
@@ -43,7 +45,8 @@ namespace REASite.Controllers
 
             if (!string.IsNullOrEmpty(search))
             {
-                apartments = apartments.Where(a => a.Title.Contains(search) || a.Description.Contains(search));
+                apartments = apartments.Where(a => EF.Functions.ILike(a.Title, $"%{search}%") ||
+                                                     EF.Functions.ILike(a.Description, $"%{search}%"));
             }
 
             if (!string.IsNullOrEmpty(city))
@@ -68,53 +71,54 @@ namespace REASite.Controllers
             ViewBag.Type = type;
             return View (apartments);
         }
-        [Authorize]
         [HttpPost]
-        public async Task<IActionResult> AddToFavorites(int apartmentId)
+        public async Task<IActionResult> AddToFavorites([FromBody] int apartmentId)
         {
-            var user = await _userManager.GetUserAsync(User);
-            if (user == null)
+            try
             {
-                return Unauthorized();
+                var user = await _userManager.GetUserAsync(User);
+                if (user == null)
+                    return Json(new { success = false, message = "Требуется авторизация" }); // Всегда JSON
+
+                var apartmentExists = await _context.Apartments.AnyAsync(a => a.Id == apartmentId);
+                if (!apartmentExists)
+                    return Json(new { success = false, message = "Квартира не найдена" }); // JSON
+
+                // ... остальной код ...
+
+                return Json(new { success = true, message = "Добавлено в избранное" }); // Явный JSON
             }
-
-            var existingFavorite = await _context.Favorites
-                .FirstOrDefaultAsync(f => f.UserId == user.Id && f.ApartmentId == apartmentId);
-
-            if (existingFavorite == null)
+            catch (Exception ex)
             {
-                var favorite = new Favorites
-                {
-                    UserId = user.Id,
-                    ApartmentId = apartmentId
-                };
-                _context.Favorites.Add(favorite);
-                await _context.SaveChangesAsync();
+                return Json(new { success = false, message = ex.Message }); // Всегда JSON
             }
-
-            return RedirectToAction("Index");
         }
 
         [Authorize]
         [HttpPost]
-        public async Task<IActionResult> RemoveFromFavorites(int apartmentId)
+        public async Task<IActionResult> RemoveFromFavorites([FromBody] int apartmentId)
         {
-            var user = await _userManager.GetUserAsync(User);
-            if (user == null)
+            try
             {
-                return Unauthorized();
+                var user = await _userManager.GetUserAsync(User);
+                if (user == null) return Unauthorized(new { message = "Требуется авторизация" });
+
+                var favorite = await _context.Favorites
+                    .FirstOrDefaultAsync(f => f.UserId == user.Id && f.ApartmentId == apartmentId);
+
+                if (favorite != null)
+                {
+                    _context.Favorites.Remove(favorite);
+                    await _context.SaveChangesAsync();
+                }
+
+                return Ok(new { message = "Удалено из избранного" });
             }
-
-            var favorite = await _context.Favorites
-                .FirstOrDefaultAsync(f => f.UserId == user.Id && f.ApartmentId == apartmentId);
-
-            if (favorite != null)
+            catch (Exception ex)
             {
-                _context.Favorites.Remove(favorite);
-                await _context.SaveChangesAsync();
+                _logger.LogError(ex, "Ошибка удаления из избранного");
+                return StatusCode(500, new { message = "Внутренняя ошибка сервера" });
             }
-
-            return RedirectToAction("Index");
         }
 
 
@@ -384,13 +388,17 @@ namespace REASite.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> Delete([FromBody] DeleteApartmentRequestModel model)
         {
-            var apartment = await _context.Apartments.FirstOrDefaultAsync(a => a.Id == id);
+            if (model == null || model.ApartmentId <= 0)
+            {
+                return Json(new { success = false, message = "Неверные данные" });
+            }
 
+            var apartment = await _context.Apartments.FirstOrDefaultAsync(a => a.Id == model.ApartmentId);
             if (apartment == null)
             {
-                return NotFound();
+                return Json(new { success = false, message = "Квартира не найдена" });
             }
             var addressId = apartment.AddressId;
 
@@ -399,7 +407,7 @@ namespace REASite.Controllers
 
             // Проверяем, остались ли другие квартиры с этим адресом
             await DeleteAddressIfNotLinkedToAppartmentAsync(addressId);
-            return Ok();
+            return Json(new { success = true });
         }
         private async Task DeleteAddressIfNotLinkedToAppartmentAsync(int addressId)
         {
@@ -417,33 +425,39 @@ namespace REASite.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteImage(int imageId, int apartmentId)
+        public async Task<IActionResult> DeleteImage(string imageId, int apartmentId)
         {
-            var image = await _context.ApartmentImages.FindAsync(imageId);
-            if (image == null || image.ApartmentId != apartmentId)
-            {
-                return NotFound();
-            }
-
             try
             {
-                // Удаление изображения из LiteDB  
-                await _imageService.DeleteImageAsync(image.ImageID);
+                // Находим связь изображения с квартирой
+                var apartmentImage = await _context.ApartmentImages
+                    .FirstOrDefaultAsync(ai => ai.ImageID == imageId && ai.ApartmentId == apartmentId);
 
-                // Удаление записи из PostgreSQL  
-                _context.ApartmentImages.Remove(image);
+                if (apartmentImage == null)
+                    return NotFound();
+
+                // Удаляем связь
+                _context.ApartmentImages.Remove(apartmentImage);
                 await _context.SaveChangesAsync();
 
-                _logger.LogInformation("Удалено изображение с ID {ImageId} для квартиры ID {ApartmentId}", imageId, apartmentId);
+                // Проверяем, используется ли изображение в других квартирах
+                var isUsedElsewhere = await _context.ApartmentImages
+                    .AnyAsync(ai => ai.ImageID == imageId);
+
+                // Если не используется - удаляем из LiteDB
+                if (!isUsedElsewhere)
+                {
+                    await _imageService.DeleteImageAsync(imageId);
+                }
+
+                return Ok();
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Ошибка при удалении изображения с ID {ImageId} для квартиры ID {ApartmentId}", imageId, apartmentId);
-                return StatusCode(500, "Произошла ошибка при удалении изображения.");
+                _logger.LogError(ex, "Ошибка при удалении изображения");
+                return StatusCode(500, "Ошибка при удалении изображения");
             }
-
-            return RedirectToAction("Edit", new { id = apartmentId });
-        }  
+        }
         public IActionResult Privacy()
         {
             return View();
@@ -456,4 +470,9 @@ namespace REASite.Controllers
         }
 
     }
+    public class DeleteApartmentRequestModel
+    {
+        public int ApartmentId { get; set; }
+    }
+
 }

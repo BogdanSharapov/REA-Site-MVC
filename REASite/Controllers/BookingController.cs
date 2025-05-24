@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using REASite.Data;
 using REASite.Models;
 using REASite.ViewModel;
-using System.Reflection;
+using System;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
@@ -24,7 +24,7 @@ public IActionResult Book(int apartmentId)
     var apartment = _context.Apartments.Find(apartmentId);
     if (apartment == null || apartment.OfferType != OfferTypeEnum.DailyRent)
     {
-        return NotFound();
+        return NotFound("Квартира не найдена или неподходящего типа.");
     }
     var model = new BookingViewModel
     {
@@ -53,7 +53,7 @@ public IActionResult Book(int apartmentId)
             return View(model);
         }
 
-        if (!IsApartmentAvailable(model.ApartmentId, startDateUtc, endDateUtc))
+        if (!await IsApartmentAvailable(model.ApartmentId, startDateUtc, endDateUtc))
         {
             ModelState.AddModelError("", "Квартира недоступна для выбранных дат.");
             return View(model);
@@ -74,12 +74,12 @@ public IActionResult Book(int apartmentId)
         return RedirectToAction("Index", "Home");
     }
 
-    private bool IsApartmentAvailable(int apartmentId, DateTime startDate, DateTime endDate)
-{
-    return !_context.Bookings
-        .Where(b => b.ApartmentId == apartmentId &&
-                    b.Status != "Cancelled" &&
-                    (b.StartDate < endDate && b.EndDate > startDate))
-        .Any();
-}
+    private async Task<bool> IsApartmentAvailable(int apartmentId, DateTime startDate, DateTime endDate)
+    {
+        return !await _context.Bookings.AnyAsync(b =>
+                 b.ApartmentId == apartmentId &&
+                 b.Status != "Cancelled" &&
+                 b.StartDate < endDate &&
+                 b.EndDate > startDate);
+    }
 }

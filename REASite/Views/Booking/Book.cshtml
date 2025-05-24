@@ -1,6 +1,7 @@
 ﻿@model REASite.ViewModel.BookingViewModel
 <h2>Бронирование квартиры</h2>
 <form asp-action="Book" method="post">
+    @Html.AntiForgeryToken()
     <input type="hidden" name="ApartmentId" value="@Model.ApartmentId" />
     <div class="form-group">
         <label for="StartDate">Дата начала бронирования</label>
@@ -21,3 +22,9 @@
     }
     <button type="submit" class="btn btn-primary">Забронировать</button>
 </form>  
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

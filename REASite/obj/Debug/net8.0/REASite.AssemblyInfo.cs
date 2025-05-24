@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("REASite")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a4aa10132ec0ef4952307bf2daefdd0ffd54e89")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3945ed01576747941ad41356cea8b661293aa5c7")]
 [assembly: System.Reflection.AssemblyProductAttribute("REASite")]
 [assembly: System.Reflection.AssemblyTitleAttribute("REASite")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

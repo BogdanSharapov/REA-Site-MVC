@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VUa2CKYJrUH4bs5Pjr0qpoLBVEc6nWawgR+pllB6c4A=",
+  "Hash": "OuxnLUIvLNYs8C4UwSBZ7UF/QWfa3oLKh5yPja45ZJ4=",
   "Source": "REASite",
   "BasePath": "_content/REASite",
   "Mode": "Default",
@@ -2852,6 +2852,27 @@
       "OriginalItemSpec": "wwwroot\\images\\ffedc3ac-0dc2-45ce-89a0-4f6d8e6958fc.jpg"
     },
     {
+      "Identity": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\booking-edit.js",
+      "SourceId": "REASite",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\",
+      "BasePath": "_content/REASite",
+      "RelativePath": "js/booking-edit#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9npz8bsjad",
+      "Integrity": "lQB+w0mzJnQnRXUeZoaJjsTjf9yZXP6nFVIjbsI0+Lk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\booking-edit.js"
+    },
+    {
       "Identity": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\deleteImage.js",
       "SourceId": "REASite",
       "SourceType": "Discovered",
@@ -2866,8 +2887,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "swufjeyme2",
-      "Integrity": "PNU2/8vW8CgV+VeBFkoFGah0zJva18CK4pnk4Q7FPaY=",
+      "Fingerprint": "g8hds72slg",
+      "Integrity": "gNAjIEHRl4UtATYfLM4NRWtRdI5RZVw7QJGW1RsZI4Q=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\deleteImage.js"
@@ -2887,11 +2908,53 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "atnfj9629s",
-      "Integrity": "skLuah/OBoaRESr/JZGlHqTgUhnByUgvXYw5pwnl7Fc=",
+      "Fingerprint": "ccw8j99zt0",
+      "Integrity": "vFwER3veXchs87Rz2NlkxAkAur8pTq0NGpMltkyBPHc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\deleteModal.js"
+    },
+    {
+      "Identity": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\detail.js",
+      "SourceId": "REASite",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\",
+      "BasePath": "_content/REASite",
+      "RelativePath": "js/detail#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "7h8vhzh25f",
+      "Integrity": "q+mbtI6wqzRlpXNjVecAUSxDREqPSIyhX5m4orUpMmU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\detail.js"
+    },
+    {
+      "Identity": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\favorite.js",
+      "SourceId": "REASite",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\",
+      "BasePath": "_content/REASite",
+      "RelativePath": "js/favorite#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "gkqnztc0md",
+      "Integrity": "wMLKpZCGmeSaiDuKUTPbgwdlfSivi1Wa0Uh8Ck4wTzw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\favorite.js"
     },
     {
       "Identity": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\site.js",
@@ -2908,8 +2971,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "xtxxf3hu2r",
-      "Integrity": "hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo=",
+      "Fingerprint": "3r8b2a0bt1",
+      "Integrity": "8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
@@ -12341,6 +12404,133 @@
       ]
     },
     {
+      "Route": "js/booking-edit.9npz8bsjad.js",
+      "AssetFile": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\booking-edit.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3302"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lQB+w0mzJnQnRXUeZoaJjsTjf9yZXP6nFVIjbsI0+Lk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 12:01:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9npz8bsjad"
+        },
+        {
+          "Name": "label",
+          "Value": "js/booking-edit.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-lQB+w0mzJnQnRXUeZoaJjsTjf9yZXP6nFVIjbsI0+Lk="
+        }
+      ]
+    },
+    {
+      "Route": "js/booking-edit.js",
+      "AssetFile": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\booking-edit.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3302"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lQB+w0mzJnQnRXUeZoaJjsTjf9yZXP6nFVIjbsI0+Lk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 12:01:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-lQB+w0mzJnQnRXUeZoaJjsTjf9yZXP6nFVIjbsI0+Lk="
+        }
+      ]
+    },
+    {
+      "Route": "js/deleteImage.g8hds72slg.js",
+      "AssetFile": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\deleteImage.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1317"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gNAjIEHRl4UtATYfLM4NRWtRdI5RZVw7QJGW1RsZI4Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 16:46:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "g8hds72slg"
+        },
+        {
+          "Name": "label",
+          "Value": "js/deleteImage.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gNAjIEHRl4UtATYfLM4NRWtRdI5RZVw7QJGW1RsZI4Q="
+        }
+      ]
+    },
+    {
       "Route": "js/deleteImage.js",
       "AssetFile": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\deleteImage.js",
       "Selectors": [],
@@ -12351,7 +12541,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "824"
+          "Value": "1317"
         },
         {
           "Name": "Content-Type",
@@ -12359,11 +12549,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"PNU2/8vW8CgV+VeBFkoFGah0zJva18CK4pnk4Q7FPaY=\""
+          "Value": "\"gNAjIEHRl4UtATYfLM4NRWtRdI5RZVw7QJGW1RsZI4Q=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 09 May 2025 14:13:33 GMT"
+          "Value": "Sat, 24 May 2025 16:46:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -12373,57 +12563,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-PNU2/8vW8CgV+VeBFkoFGah0zJva18CK4pnk4Q7FPaY="
+          "Value": "sha256-gNAjIEHRl4UtATYfLM4NRWtRdI5RZVw7QJGW1RsZI4Q="
         }
       ]
     },
     {
-      "Route": "js/deleteImage.swufjeyme2.js",
-      "AssetFile": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\deleteImage.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "824"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"PNU2/8vW8CgV+VeBFkoFGah0zJva18CK4pnk4Q7FPaY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 09 May 2025 14:13:33 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "swufjeyme2"
-        },
-        {
-          "Name": "label",
-          "Value": "js/deleteImage.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-PNU2/8vW8CgV+VeBFkoFGah0zJva18CK4pnk4Q7FPaY="
-        }
-      ]
-    },
-    {
-      "Route": "js/deleteModal.atnfj9629s.js",
+      "Route": "js/deleteModal.ccw8j99zt0.js",
       "AssetFile": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\deleteModal.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -12433,7 +12578,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1727"
+          "Value": "1900"
         },
         {
           "Name": "Content-Type",
@@ -12441,11 +12586,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"skLuah/OBoaRESr/JZGlHqTgUhnByUgvXYw5pwnl7Fc=\""
+          "Value": "\"vFwER3veXchs87Rz2NlkxAkAur8pTq0NGpMltkyBPHc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 22 May 2025 20:02:05 GMT"
+          "Value": "Sat, 24 May 2025 16:16:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -12455,7 +12600,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "atnfj9629s"
+          "Value": "ccw8j99zt0"
         },
         {
           "Name": "label",
@@ -12463,7 +12608,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-skLuah/OBoaRESr/JZGlHqTgUhnByUgvXYw5pwnl7Fc="
+          "Value": "sha256-vFwER3veXchs87Rz2NlkxAkAur8pTq0NGpMltkyBPHc="
         }
       ]
     },
@@ -12478,7 +12623,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1727"
+          "Value": "1900"
         },
         {
           "Name": "Content-Type",
@@ -12486,11 +12631,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"skLuah/OBoaRESr/JZGlHqTgUhnByUgvXYw5pwnl7Fc=\""
+          "Value": "\"vFwER3veXchs87Rz2NlkxAkAur8pTq0NGpMltkyBPHc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 22 May 2025 20:02:05 GMT"
+          "Value": "Sat, 24 May 2025 16:16:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -12500,7 +12645,216 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-skLuah/OBoaRESr/JZGlHqTgUhnByUgvXYw5pwnl7Fc="
+          "Value": "sha256-vFwER3veXchs87Rz2NlkxAkAur8pTq0NGpMltkyBPHc="
+        }
+      ]
+    },
+    {
+      "Route": "js/detail.7h8vhzh25f.js",
+      "AssetFile": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\detail.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "484"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"q+mbtI6wqzRlpXNjVecAUSxDREqPSIyhX5m4orUpMmU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 16:25:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7h8vhzh25f"
+        },
+        {
+          "Name": "label",
+          "Value": "js/detail.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-q+mbtI6wqzRlpXNjVecAUSxDREqPSIyhX5m4orUpMmU="
+        }
+      ]
+    },
+    {
+      "Route": "js/detail.js",
+      "AssetFile": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\detail.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "484"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"q+mbtI6wqzRlpXNjVecAUSxDREqPSIyhX5m4orUpMmU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 16:25:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-q+mbtI6wqzRlpXNjVecAUSxDREqPSIyhX5m4orUpMmU="
+        }
+      ]
+    },
+    {
+      "Route": "js/favorite.gkqnztc0md.js",
+      "AssetFile": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\favorite.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2680"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wMLKpZCGmeSaiDuKUTPbgwdlfSivi1Wa0Uh8Ck4wTzw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 08:34:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gkqnztc0md"
+        },
+        {
+          "Name": "label",
+          "Value": "js/favorite.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wMLKpZCGmeSaiDuKUTPbgwdlfSivi1Wa0Uh8Ck4wTzw="
+        }
+      ]
+    },
+    {
+      "Route": "js/favorite.js",
+      "AssetFile": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\favorite.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2680"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wMLKpZCGmeSaiDuKUTPbgwdlfSivi1Wa0Uh8Ck4wTzw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 08:34:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wMLKpZCGmeSaiDuKUTPbgwdlfSivi1Wa0Uh8Ck4wTzw="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.3r8b2a0bt1.js",
+      "AssetFile": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\site.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 07:56:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3r8b2a0bt1"
+        },
+        {
+          "Name": "label",
+          "Value": "js/site.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U="
         }
       ]
     },
@@ -12515,7 +12869,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "231"
+          "Value": "3"
         },
         {
           "Name": "Content-Type",
@@ -12523,11 +12877,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo=\""
+          "Value": "\"8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 12:40:06 GMT"
+          "Value": "Sat, 24 May 2025 07:56:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -12537,52 +12891,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo="
-        }
-      ]
-    },
-    {
-      "Route": "js/site.xtxxf3hu2r.js",
-      "AssetFile": "C:\\Users\\sarap\\source\\repos\\StudyUtility\\REASite\\REASite\\wwwroot\\js\\site.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "231"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 28 Mar 2025 12:40:06 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "xtxxf3hu2r"
-        },
-        {
-          "Name": "label",
-          "Value": "js/site.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo="
+          "Value": "sha256-8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U="
         }
       ]
     },
@@ -17365,7 +17674,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 21 May 2025 14:52:46 GMT"
+          "Value": "Sat, 24 May 2025 13:31:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -17402,7 +17711,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 21 May 2025 14:52:46 GMT"
+          "Value": "Sat, 24 May 2025 13:31:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -17439,7 +17748,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 21 May 2025 14:52:46 GMT"
+          "Value": "Sat, 24 May 2025 13:31:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -17484,7 +17793,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 21 May 2025 14:52:46 GMT"
+          "Value": "Sat, 24 May 2025 13:31:32 GMT"
         },
         {
           "Name": "Cache-Control",

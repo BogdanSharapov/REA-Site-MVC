@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using REASite.Data;
@@ -11,9 +12,11 @@ using REASite.Data;
 namespace REASite.Migrations
 {
     [DbContext(typeof(REASiteDbContext))]
-    partial class REASiteDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250523170636_UpdatedFavoritesModel")]
+    partial class UpdatedFavoritesModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -392,6 +395,10 @@ namespace REASite.Migrations
                     b.Property<int>("ApartmentId")
                         .HasColumnType("integer");
 
+                    b.Property<byte[]>("RowVersion")
+                        .IsRequired()
+                        .HasColumnType("bytea");
+
                     b.Property<string>("UserId")
                         .IsRequired()
                         .HasColumnType("text");
@@ -400,8 +407,7 @@ namespace REASite.Migrations
 
                     b.HasIndex("ApartmentId");
 
-                    b.HasIndex("UserId", "ApartmentId")
-                        .IsUnique();
+                    b.HasIndex("UserId");
 
                     b.ToTable("Favorites");
                 });
