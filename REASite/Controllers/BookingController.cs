@@ -26,12 +26,14 @@ public IActionResult Book(int apartmentId)
     {
         return NotFound("Квартира не найдена или неподходящего типа.");
     }
-    var model = new BookingViewModel
-    {
-        ApartmentId = apartmentId,
-        StartDate = DateTime.Today,
-        EndDate = DateTime.Today.AddDays(1)
-    };
+
+        var model = new BookingViewModel
+        {
+            ApartmentId = apartmentId,
+            ApartmentTitle = apartment.Title,
+            StartDate = DateTime.Today,
+            EndDate = DateTime.Today.AddDays(1)
+        };
     return View(model);
 }
 

@@ -3,6 +3,8 @@
 <form asp-action="Book" method="post">
     @Html.AntiForgeryToken()
     <input type="hidden" name="ApartmentId" value="@Model.ApartmentId" />
+    <input type="hidden" name="ApartmentTitle" value="@Model.ApartmentTitle" />
+    <input type="hidden" name="Status" value="Pending" />
     <div class="form-group">
         <label for="StartDate">Дата начала бронирования</label>
         <input type="date" name="StartDate" class="form-control" value="@Model.StartDate.ToString("yyyy-MM-dd")" required />
@@ -11,6 +13,7 @@
         <label for="EndDate">Дата окончания бронирования</label>
         <input type="date" name="EndDate" class="form-control" value="@Model.EndDate.ToString("yyyy-MM-dd")" required />
     </div>
+    
     @if (!ViewData.ModelState.IsValid)
     {
         <div class="alert alert-danger">

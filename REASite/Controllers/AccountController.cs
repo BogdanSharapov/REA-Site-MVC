@@ -106,7 +106,6 @@ public class AccountController : Controller
         {
             return Json(new { success = false, message = "Бронирование не найдено" });
         }
-
         booking.StartDate = DateTime.SpecifyKind(model.StartDate, DateTimeKind.Utc);
         booking.EndDate = DateTime.SpecifyKind(model.EndDate, DateTimeKind.Utc);
 
