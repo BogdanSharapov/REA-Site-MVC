@@ -5,8 +5,8 @@
     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
 <div class="modal-body">
-    <form id="editBookingForm" asp-action="UpdateBooking" method="post">
-        <input type="hidden" asp-for="Id" />
+    <form id="editBookingForm" asp-action="EditBooking" method="post">
+        <input type="hidden" name="BookingId" asp-for="Id" />
         <input type="hidden" asp-for="ApartmentId" />
         <div class="form-group mb-3">
             <label asp-for="ApartmentTitle" class="form-label"></label>

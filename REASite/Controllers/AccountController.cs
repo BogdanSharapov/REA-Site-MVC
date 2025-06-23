@@ -108,6 +108,9 @@ public class AccountController : Controller
         }
         booking.StartDate = DateTime.SpecifyKind(model.StartDate, DateTimeKind.Utc);
         booking.EndDate = DateTime.SpecifyKind(model.EndDate, DateTimeKind.Utc);
+        booking.Id = model.BookingId;
+        booking.Status = "Pending";
+
 
         await _context.SaveChangesAsync();
 
